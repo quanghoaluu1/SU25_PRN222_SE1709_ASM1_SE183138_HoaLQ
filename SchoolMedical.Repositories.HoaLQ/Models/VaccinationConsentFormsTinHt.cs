@@ -20,4 +20,12 @@ public partial class VaccinationConsentFormsTinHt
     public string Notes { get; set; }
 
     public bool? IsApproved { get; set; }
+
+    public virtual User Parent { get; set; }
+
+    public virtual StudentsHoaLq Student { get; set; }
+
+    public virtual ICollection<VaccinationRecordsTinHt> VaccinationRecordsTinHts { get; set; } = new List<VaccinationRecordsTinHt>();
+
+    public virtual VaccineCampaignsTinHt VaccineCampaign { get; set; }
 }

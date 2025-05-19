@@ -75,15 +75,7 @@
          "ObjectType": 0
       },
       {
-         "Name": "[dbo].[VaccinationConsentForms]",
-         "ObjectType": 0
-      },
-      {
          "Name": "[dbo].[VaccinationConsentFormsTinHT]",
-         "ObjectType": 0
-      },
-      {
-         "Name": "[dbo].[VaccinationRecords]",
          "ObjectType": 0
       },
       {

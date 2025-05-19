@@ -11,7 +11,7 @@ public partial class VaccinationRecordsTinHt
 
     public int? StudentId { get; set; }
 
-    public int? VaccineCampaignId { get; set; }
+    public int? VaccineCampaignTinHtid { get; set; }
 
     public int? ConsentFormId { get; set; }
 
@@ -26,4 +26,12 @@ public partial class VaccinationRecordsTinHt
     public string AdverseSymptoms { get; set; }
 
     public bool? IsCompleted { get; set; }
+
+    public virtual VaccinationConsentFormsTinHt ConsentForm { get; set; }
+
+    public virtual User Nurse { get; set; }
+
+    public virtual StudentsHoaLq Student { get; set; }
+
+    public virtual VaccineCampaignsTinHt VaccineCampaignTinHt { get; set; }
 }

@@ -29,7 +29,7 @@ public partial class VaccineCampaignsTinHt
 
     public DateTime? RegistrationEndAt { get; set; }
 
-    public virtual ICollection<VaccinationConsentForm> VaccinationConsentForms { get; set; } = new List<VaccinationConsentForm>();
+    public virtual ICollection<VaccinationConsentFormsTinHt> VaccinationConsentFormsTinHts { get; set; } = new List<VaccinationConsentFormsTinHt>();
 
-    public virtual ICollection<VaccinationRecord> VaccinationRecords { get; set; } = new List<VaccinationRecord>();
+    public virtual ICollection<VaccinationRecordsTinHt> VaccinationRecordsTinHts { get; set; } = new List<VaccinationRecordsTinHt>();
 }
