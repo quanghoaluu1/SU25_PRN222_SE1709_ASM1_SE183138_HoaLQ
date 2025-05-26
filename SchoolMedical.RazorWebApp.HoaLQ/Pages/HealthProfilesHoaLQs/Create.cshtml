@@ -1,0 +1,119 @@
+﻿@page
+@model SchoolMedical.RazorWebApp.HoaLQ.Pages.HealthProfilesHoaLQs.CreateModel
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+<h1>Create</h1>
+
+<h4>HealthProfilesHoaLq</h4>
+<hr />
+<div class="card shadow-sm">
+    <div class="card-header bg-primary text-white">
+        <h4 class="mb-0">Health Profile Details</h4>
+    </div>        
+<div class="card-body">
+
+    <form method="post">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            @* <div class="form-group"> *@
+            @*     <label asp-for="HealthProfilesHoaLq.HealthProfileHoaLqid" class="control-label"></label> *@
+            @*     <input asp-for="HealthProfilesHoaLq.HealthProfileHoaLqid" class="form-control" /> *@
+            @*     <span asp-validation-for="HealthProfilesHoaLq.HealthProfileHoaLqid" class="text-danger"></span> *@
+            @* </div> *@
+            <div class="form-group mb-3">
+                <label asp-for="HealthProfilesHoaLq.StudentId" class="control-label">Học Sinh</label>
+                <select asp-for="HealthProfilesHoaLq.StudentId" class="form-control" asp-items="Model.StudentSelectList">
+                    <option value="">-- Chọn học sinh --</option>
+                </select>
+                <span asp-validation-for="HealthProfilesHoaLq.StudentId" class="text-danger"></span>
+            </div>
+            <div class="row">
+                <div class="form-group col-md-6 mb-3">
+                    <label asp-for="HealthProfilesHoaLq.Weight" class="control-label"></label>
+                    <input asp-for="HealthProfilesHoaLq.Weight" class="form-control" />
+                    <span asp-validation-for="HealthProfilesHoaLq.Weight" class="text-danger"></span>
+                </div>
+                <div class="form-group col-md-6 mb-3">
+                    <label asp-for="HealthProfilesHoaLq.Height" class="control-label"></label>
+                    <input asp-for="HealthProfilesHoaLq.Height" class="form-control" />
+                    <span asp-validation-for="HealthProfilesHoaLq.Height" class="text-danger"></span>
+                </div>
+            </div>
+            <div class="row">
+                <div class="form-group col-md-6 mb-3">
+                    <label asp-for="HealthProfilesHoaLq.Sight" class="control-label"></label>
+                    <input asp-for="HealthProfilesHoaLq.Sight" class="form-control" />
+                    <span asp-validation-for="HealthProfilesHoaLq.Sight" class="text-danger"></span>
+                </div>
+                <div class="form-group col-md-6 mb-3">
+                    <label asp-for="HealthProfilesHoaLq.Hearing" class="control-label"></label>
+                    <input asp-for="HealthProfilesHoaLq.Hearing" class="form-control" />
+                    <span asp-validation-for="HealthProfilesHoaLq.Hearing" class="text-danger"></span>
+                </div>
+            </div>
+            <div class="row">
+                <div class="form-group col-md-6 mb-3">
+                    <label asp-for="HealthProfilesHoaLq.BloodPressure" class="control-label"></label>
+                    <input asp-for="HealthProfilesHoaLq.BloodPressure" class="form-control" />
+                    <span asp-validation-for="HealthProfilesHoaLq.BloodPressure" class="text-danger"></span>
+                </div>
+                <div class="form-group col-md-6 mb-3">
+                    <label asp-for="HealthProfilesHoaLq.BloodType" class="control-label"></label>
+                    <input asp-for="HealthProfilesHoaLq.BloodType" class="form-control" />
+                    <span asp-validation-for="HealthProfilesHoaLq.BloodType" class="text-danger"></span>
+                </div>
+            </div>
+            <div class="row">
+                <div class="form-group col-md-6 mb-3">
+                    <label asp-for="HealthProfilesHoaLq.Sex" class="control-label"></label>
+                    <select asp-for="HealthProfilesHoaLq.Sex" class="form-select">
+                        <option value="">-- Chọn Giới Tính --</option>
+                        <option value="true">Nam</option>
+                        <option value="false">Nữ</option>
+                    </select>
+                    <span asp-validation-for="HealthProfilesHoaLq.Sex" class="text-danger"></span>
+                </div>
+                <div class="form-group col-md-6 mb-3">
+                    <label asp-for="HealthProfilesHoaLq.DateOfBirth" class="control-label"></label>
+                    <input asp-for="HealthProfilesHoaLq.DateOfBirth" type="date" class="form-control" />
+                    <span asp-validation-for="HealthProfilesHoaLq.DateOfBirth" class="text-danger"></span>
+                </div>
+            </div>
+            <div class="form-group mb-3">
+                <label asp-for="HealthProfilesHoaLq.Allergy" class="control-label"></label>
+                <input asp-for="HealthProfilesHoaLq.Allergy" class="form-control" />
+                <span asp-validation-for="HealthProfilesHoaLq.Allergy" class="text-danger"></span>
+            </div>
+            <div class="form-group mb-3">
+                <label asp-for="HealthProfilesHoaLq.ChronicDisease" class="control-label"></label>
+                <input asp-for="HealthProfilesHoaLq.ChronicDisease" class="form-control" />
+                <span asp-validation-for="HealthProfilesHoaLq.ChronicDisease" class="text-danger"></span>
+            </div>
+            <div class="form-group mb-3">
+                <label asp-for="HealthProfilesHoaLq.MedicalHistory" class="control-label"></label>
+                <input asp-for="HealthProfilesHoaLq.MedicalHistory" class="form-control" />
+                <span asp-validation-for="HealthProfilesHoaLq.MedicalHistory" class="text-danger"></span>
+            </div>
+            <div class="form-group mb-3">
+                <label asp-for="HealthProfilesHoaLq.CurrentMedical" class="control-label"></label>
+                <input asp-for="HealthProfilesHoaLq.CurrentMedical" class="form-control" />
+                <span asp-validation-for="HealthProfilesHoaLq.CurrentMedical" class="text-danger"></span>
+            </div>
+            
+            <div class="form-group ">
+                <input type="submit" value="Create" class="btn btn-success" />
+                <a asp-page="./Index" class="btn btn-secondary ms-2">Back to List</a>
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-page="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

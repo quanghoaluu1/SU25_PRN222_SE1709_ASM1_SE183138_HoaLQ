@@ -1,8 +1,11 @@
+using SchoolMedical.Services.HoaLQ;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddRazorPages();
-
+builder.Services.AddScoped<IHealthProfilesHoaLqService, HealthProfilesHoaLqService>();
+builder.Services.AddScoped<IStudentHoaLQService, StudentHoaLQService>();
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
