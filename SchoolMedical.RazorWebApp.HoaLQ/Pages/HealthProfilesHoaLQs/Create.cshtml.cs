@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.AspNetCore.Mvc.Rendering;
@@ -10,8 +11,11 @@ using SchoolMedical.Services.HoaLQ;
 
 namespace SchoolMedical.RazorWebApp.HoaLQ.Pages.HealthProfilesHoaLQs
 {
+    [Authorize(Roles = "1,2")]
     public class CreateModel : PageModel
     {
+        #region  Use Services
+        
         private readonly IHealthProfilesHoaLqService _healthProfilesHoaLqService;
         private readonly IStudentHoaLQService _studentHoaLQService;
         public CreateModel(IHealthProfilesHoaLqService healthProfilesHoaLqService, IStudentHoaLQService studentHoaLQService)
@@ -36,5 +40,7 @@ namespace SchoolMedical.RazorWebApp.HoaLQ.Pages.HealthProfilesHoaLQs
             await _healthProfilesHoaLqService.CreateAsync(HealthProfilesHoaLq);
             return RedirectToPage("./Index");
         }
+        #endregion
+
     }
 }

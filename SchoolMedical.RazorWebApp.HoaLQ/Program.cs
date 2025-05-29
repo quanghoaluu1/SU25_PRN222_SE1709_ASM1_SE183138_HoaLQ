@@ -1,12 +1,21 @@
+using Microsoft.AspNetCore.Authentication.Cookies;
 using SchoolMedical.Services.HoaLQ;
 
 var builder = WebApplication.CreateBuilder(args);
+builder.Services.AddHttpContextAccessor();
 
 // Add services to the container.
 builder.Services.AddRazorPages();
 builder.Services.AddScoped<IHealthProfilesHoaLqService, HealthProfilesHoaLqService>();
 builder.Services.AddScoped<IStudentHoaLQService, StudentHoaLQService>();
-var app = builder.Build();
+builder.Services.AddScoped<ISystemUserAccountService, SystemUserAccountService>();
+builder.Services.AddSession();
+builder.Services.AddAuthentication(CookieAuthenticationDefaults.AuthenticationScheme)
+    .AddCookie(options =>
+    {
+        options.AccessDeniedPath = "/Account/Forbidden";
+        options.ExpireTimeSpan = TimeSpan.FromMinutes(5);
+    });var app = builder.Build();
 
 // Configure the HTTP request pipeline.
 if (!app.Environment.IsDevelopment())
@@ -16,13 +25,13 @@ if (!app.Environment.IsDevelopment())
     app.UseHsts();
 }
 
+app.UseSession();
 app.UseHttpsRedirection();
 app.UseStaticFiles();
-
 app.UseRouting();
 
 app.UseAuthorization();
 
-app.MapRazorPages();
+app.MapRazorPages().RequireAuthorization();
 
 app.Run();

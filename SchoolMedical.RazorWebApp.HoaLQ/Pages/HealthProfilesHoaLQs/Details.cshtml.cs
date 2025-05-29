@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.EntityFrameworkCore;
@@ -10,6 +11,7 @@ using SchoolMedical.Services.HoaLQ;
 
 namespace SchoolMedical.RazorWebApp.HoaLQ.Pages.HealthProfilesHoaLQs
 {
+    [Authorize(Roles = "1,2")]
     public class DetailsModel : PageModel
     {
 

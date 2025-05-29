@@ -57,7 +57,6 @@ public partial class SU25_PRN222_SE1709_G1_SchoolMedicalContext : DbContext
     //     protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
     // #warning To protect potentially sensitive information in your connection string, you should move it out of source code. You can avoid scaffolding the connection string by using the Name= syntax to read it from configuration - see https://go.microsoft.com/fwlink/?linkid=2131148. For more guidance on storing connection strings, see https://go.microsoft.com/fwlink/?LinkId=723263.
     //         => optionsBuilder.UseSqlServer("Data Source=HOA-PC\\HOA;Initial Catalog=SU25_PRN222_SE1709_G1_SchoolMedical;Persist Security Info=True;User ID=sa;Password=12345;Encrypt=False");
-
     public static string GetConnectionString(string connectionStringName)
     {
         var config = new ConfigurationBuilder()
@@ -71,44 +70,39 @@ public partial class SU25_PRN222_SE1709_G1_SchoolMedicalContext : DbContext
 
     protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         => optionsBuilder.UseSqlServer(GetConnectionString("DefaultConnection")).UseQueryTrackingBehavior(QueryTrackingBehavior.NoTracking);
+
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
         modelBuilder.Entity<BatchHauMpn>(entity =>
         {
-            entity.HasKey(e => e.BatchHauMpnid).HasName("PK__BatchHau__66B8B84183BA66E2");
+            entity.HasKey(e => e.BatchHauMpnid).HasName("PK__BatchHau__66B8B8419D8FE979");
 
             entity.ToTable("BatchHauMPN");
 
-            entity.Property(e => e.BatchHauMpnid)
-                .ValueGeneratedNever()
-                .HasColumnName("BatchHauMPNId");
+            entity.Property(e => e.BatchHauMpnid).HasColumnName("BatchHauMPNId");
             entity.Property(e => e.BatchImportDate).HasColumnType("datetime");
         });
 
         modelBuilder.Entity<Class>(entity =>
         {
-            entity.HasKey(e => e.ClassId).HasName("PK__Class__FDF4798665CBD8E0");
+            entity.HasKey(e => e.ClassId).HasName("PK__Class__FDF47986B4E49E1B");
 
             entity.ToTable("Class");
 
-            entity.Property(e => e.ClassId)
-                .ValueGeneratedNever()
-                .HasColumnName("class_id");
+            entity.Property(e => e.ClassId).HasColumnName("class_id");
             entity.Property(e => e.ClassName)
-                .HasMaxLength(1)
+                .HasMaxLength(255)
                 .HasColumnName("class_name");
         });
 
         modelBuilder.Entity<HealthCheckConfirmationThienLm>(entity =>
         {
-            entity.HasKey(e => e.HealthCheckConfirmationThienLmid).HasName("PK__HealthCh__675B6E3C0D487574");
+            entity.HasKey(e => e.HealthCheckConfirmationThienLmid).HasName("PK__HealthCh__675B6E3C9E8838A2");
 
             entity.ToTable("HealthCheckConfirmationThienLM");
 
-            entity.Property(e => e.HealthCheckConfirmationThienLmid)
-                .ValueGeneratedNever()
-                .HasColumnName("HealthCheckConfirmationThienLMId");
-            entity.Property(e => e.Description).HasMaxLength(1);
+            entity.Property(e => e.HealthCheckConfirmationThienLmid).HasColumnName("HealthCheckConfirmationThienLMId");
+            entity.Property(e => e.Description).HasMaxLength(255);
             entity.Property(e => e.HealthCheckSessionThienLmid).HasColumnName("HealthCheckSessionThienLMId");
             entity.Property(e => e.SubmitAt).HasColumnType("datetime");
 
@@ -127,15 +121,13 @@ public partial class SU25_PRN222_SE1709_G1_SchoolMedicalContext : DbContext
 
         modelBuilder.Entity<HealthCheckRecordThienLm>(entity =>
         {
-            entity.HasKey(e => e.HealthCheckRecordThienLmid).HasName("PK__HealthCh__6FEBB3C34A76ABE3");
+            entity.HasKey(e => e.HealthCheckRecordThienLmid).HasName("PK__HealthCh__6FEBB3C3043E6C08");
 
             entity.ToTable("HealthCheckRecordThienLM");
 
-            entity.Property(e => e.HealthCheckRecordThienLmid)
-                .ValueGeneratedNever()
-                .HasColumnName("HealthCheckRecordThienLMId");
+            entity.Property(e => e.HealthCheckRecordThienLmid).HasColumnName("HealthCheckRecordThienLMId");
             entity.Property(e => e.CheckedAt).HasColumnType("datetime");
-            entity.Property(e => e.Description).HasMaxLength(1);
+            entity.Property(e => e.Description).HasMaxLength(255);
             entity.Property(e => e.HealthCheckConfirmationThienLmid).HasColumnName("HealthCheckConfirmationThienLMId");
             entity.Property(e => e.HealthCheckSessionThienLmid).HasColumnName("HealthCheckSessionThienLMId");
             entity.Property(e => e.Height).HasColumnType("decimal(18, 0)");
@@ -160,17 +152,15 @@ public partial class SU25_PRN222_SE1709_G1_SchoolMedicalContext : DbContext
 
         modelBuilder.Entity<HealthCheckSessionThienLm>(entity =>
         {
-            entity.HasKey(e => e.HealthCheckSessionThienLmid).HasName("PK__HealthCh__D59DB1C00EFC07D9");
+            entity.HasKey(e => e.HealthCheckSessionThienLmid).HasName("PK__HealthCh__D59DB1C02187BD49");
 
             entity.ToTable("HealthCheckSessionThienLM");
 
-            entity.Property(e => e.HealthCheckSessionThienLmid)
-                .ValueGeneratedNever()
-                .HasColumnName("HealthCheckSessionThienLMId");
-            entity.Property(e => e.Address).HasMaxLength(1);
-            entity.Property(e => e.Description).HasMaxLength(1);
+            entity.Property(e => e.HealthCheckSessionThienLmid).HasColumnName("HealthCheckSessionThienLMId");
+            entity.Property(e => e.Address).HasMaxLength(255);
+            entity.Property(e => e.Description).HasMaxLength(255);
             entity.Property(e => e.EndAt).HasColumnType("datetime");
-            entity.Property(e => e.Name).HasMaxLength(1);
+            entity.Property(e => e.Name).HasMaxLength(255);
             entity.Property(e => e.RegistrationEndAt).HasColumnType("datetime");
             entity.Property(e => e.RegistrationStartAt).HasColumnType("datetime");
             entity.Property(e => e.StartAt).HasColumnType("datetime");
@@ -178,25 +168,23 @@ public partial class SU25_PRN222_SE1709_G1_SchoolMedicalContext : DbContext
 
         modelBuilder.Entity<HealthProfilesHoaLq>(entity =>
         {
-            entity.HasKey(e => e.HealthProfileHoaLqid).HasName("PK__HealthPr__3268839EB9E647B6");
+            entity.HasKey(e => e.HealthProfileHoaLqid).HasName("PK__HealthPr__3268839E5908CF13");
 
             entity.ToTable("HealthProfilesHoaLQ");
 
-            entity.Property(e => e.HealthProfileHoaLqid)
-                .ValueGeneratedNever()
-                .HasColumnName("HealthProfileHoaLQID");
+            entity.Property(e => e.HealthProfileHoaLqid).HasColumnName("HealthProfileHoaLQID");
             entity.Property(e => e.Allergy)
-                .HasMaxLength(1)
+                .HasMaxLength(255)
                 .HasColumnName("allergy");
             entity.Property(e => e.BloodPressure).HasColumnName("blood_pressure");
             entity.Property(e => e.BloodType)
-                .HasMaxLength(1)
+                .HasMaxLength(255)
                 .HasColumnName("blood_type");
             entity.Property(e => e.ChronicDisease)
-                .HasMaxLength(1)
+                .HasMaxLength(255)
                 .HasColumnName("chronic_disease");
             entity.Property(e => e.CurrentMedical)
-                .HasMaxLength(1)
+                .HasMaxLength(255)
                 .HasColumnName("current_medical");
             entity.Property(e => e.DateOfBirth).HasColumnName("date_of_birth");
             entity.Property(e => e.Hearing).HasColumnName("hearing");
@@ -204,7 +192,7 @@ public partial class SU25_PRN222_SE1709_G1_SchoolMedicalContext : DbContext
                 .HasColumnType("decimal(18, 0)")
                 .HasColumnName("height");
             entity.Property(e => e.MedicalHistory)
-                .HasMaxLength(1)
+                .HasMaxLength(255)
                 .HasColumnName("medical_history");
             entity.Property(e => e.Sex).HasColumnName("sex");
             entity.Property(e => e.Sight).HasColumnName("sight");
@@ -220,14 +208,12 @@ public partial class SU25_PRN222_SE1709_G1_SchoolMedicalContext : DbContext
 
         modelBuilder.Entity<MedicalIncidentMedicinesDuyTv>(entity =>
         {
-            entity.HasKey(e => e.MedicalIncidentMedicinesDuyTvid).HasName("PK__MedicalI__E65C46E960251696");
+            entity.HasKey(e => e.MedicalIncidentMedicinesDuyTvid).HasName("PK__MedicalI__E65C46E9328C15C3");
 
             entity.ToTable("MedicalIncidentMedicinesDuyTV");
 
-            entity.Property(e => e.MedicalIncidentMedicinesDuyTvid)
-                .ValueGeneratedNever()
-                .HasColumnName("MedicalIncidentMedicinesDuyTVId");
-            entity.Property(e => e.UsageNote).HasMaxLength(1);
+            entity.Property(e => e.MedicalIncidentMedicinesDuyTvid).HasColumnName("MedicalIncidentMedicinesDuyTVId");
+            entity.Property(e => e.UsageNote).HasMaxLength(255);
 
             entity.HasOne(d => d.MedicalIncident).WithMany(p => p.MedicalIncidentMedicinesDuyTvs)
                 .HasForeignKey(d => d.MedicalIncidentId)
@@ -240,19 +226,17 @@ public partial class SU25_PRN222_SE1709_G1_SchoolMedicalContext : DbContext
 
         modelBuilder.Entity<MedicalIncidentsDuyTv>(entity =>
         {
-            entity.HasKey(e => e.MedicalIncidentDuyTvid).HasName("PK__MedicalI__87D4015DAECD85B1");
+            entity.HasKey(e => e.MedicalIncidentDuyTvid).HasName("PK__MedicalI__87D4015DE75BB754");
 
             entity.ToTable("MedicalIncidentsDuyTV");
 
-            entity.Property(e => e.MedicalIncidentDuyTvid)
-                .ValueGeneratedNever()
-                .HasColumnName("MedicalIncidentDuyTVId");
-            entity.Property(e => e.Diagnosis).HasMaxLength(1);
-            entity.Property(e => e.FollowUpNote).HasMaxLength(1);
+            entity.Property(e => e.MedicalIncidentDuyTvid).HasColumnName("MedicalIncidentDuyTVId");
+            entity.Property(e => e.Diagnosis).HasMaxLength(255);
+            entity.Property(e => e.FollowUpNote).HasMaxLength(255);
             entity.Property(e => e.IncidentTime).HasColumnType("datetime");
-            entity.Property(e => e.IncidentType).HasMaxLength(1);
-            entity.Property(e => e.Symptoms).HasMaxLength(1);
-            entity.Property(e => e.Treatment).HasMaxLength(1);
+            entity.Property(e => e.IncidentType).HasMaxLength(255);
+            entity.Property(e => e.Symptoms).HasMaxLength(255);
+            entity.Property(e => e.Treatment).HasMaxLength(255);
 
             entity.HasOne(d => d.Nurse).WithMany(p => p.MedicalIncidentsDuyTvs)
                 .HasForeignKey(d => d.NurseId)
@@ -265,13 +249,11 @@ public partial class SU25_PRN222_SE1709_G1_SchoolMedicalContext : DbContext
 
         modelBuilder.Entity<MedicationOrderTraiNn>(entity =>
         {
-            entity.HasKey(e => e.Id).HasName("PK__Medicati__3213E83F63FD8999");
+            entity.HasKey(e => e.Id).HasName("PK__Medicati__3213E83F563973DA");
 
             entity.ToTable("MedicationOrderTraiNN");
 
-            entity.Property(e => e.Id)
-                .ValueGeneratedNever()
-                .HasColumnName("id");
+            entity.Property(e => e.Id).HasColumnName("id");
             entity.Property(e => e.CreateAt)
                 .HasColumnType("datetime")
                 .HasColumnName("createAt");
@@ -280,7 +262,7 @@ public partial class SU25_PRN222_SE1709_G1_SchoolMedicalContext : DbContext
             entity.Property(e => e.Status).HasColumnName("status");
             entity.Property(e => e.StudentId).HasColumnName("student_id");
             entity.Property(e => e.TinhTrang)
-                .HasMaxLength(1)
+                .HasMaxLength(255)
                 .HasColumnName("tinh_trang");
 
             entity.HasOne(d => d.Nurse).WithMany(p => p.MedicationOrderTraiNnNurses)
@@ -298,20 +280,20 @@ public partial class SU25_PRN222_SE1709_G1_SchoolMedicalContext : DbContext
 
         modelBuilder.Entity<MedicationTraiNn>(entity =>
         {
-            entity.HasKey(e => e.MedicationTraiNnid).HasName("PK__Medicati__6EC5F628A8976938");
+            entity.HasKey(e => e.MedicationTraiNnid).HasName("PK__Medicati__6EC5F628A131AD30");
 
             entity.ToTable("MedicationTraiNN");
 
-            entity.Property(e => e.MedicationTraiNnid)
-                .ValueGeneratedNever()
-                .HasColumnName("MedicationTraiNNID");
+            entity.Property(e => e.MedicationTraiNnid).HasColumnName("MedicationTraiNNID");
             entity.Property(e => e.DonguiId).HasColumnName("dongui_id");
-            entity.Property(e => e.MedicineName).HasColumnName("medicine_name");
+            entity.Property(e => e.MedicineName)
+                .HasMaxLength(255)
+                .HasColumnName("medicine_name");
             entity.Property(e => e.NurseNote)
-                .HasMaxLength(1)
+                .HasMaxLength(255)
                 .HasColumnName("Nurse_note");
             entity.Property(e => e.ParentNote)
-                .HasMaxLength(1)
+                .HasMaxLength(255)
                 .HasColumnName("Parent_note");
             entity.Property(e => e.Quantity).HasColumnName("quantity");
             entity.Property(e => e.ReceiveDate)
@@ -319,10 +301,10 @@ public partial class SU25_PRN222_SE1709_G1_SchoolMedicalContext : DbContext
                 .HasColumnName("Receive_date");
             entity.Property(e => e.Status).HasColumnName("status");
             entity.Property(e => e.Type)
-                .HasMaxLength(1)
+                .HasMaxLength(255)
                 .HasColumnName("type");
             entity.Property(e => e.Unit)
-                .HasMaxLength(1)
+                .HasMaxLength(255)
                 .HasColumnName("unit");
 
             entity.HasOne(d => d.Dongui).WithMany(p => p.MedicationTraiNns)
@@ -332,21 +314,19 @@ public partial class SU25_PRN222_SE1709_G1_SchoolMedicalContext : DbContext
 
         modelBuilder.Entity<MedicineHauMpn>(entity =>
         {
-            entity.HasKey(e => e.MedicineHauMpnid).HasName("PK__Medicine__570EDE00FF5BA4F3");
+            entity.HasKey(e => e.MedicineHauMpnid).HasName("PK__Medicine__570EDE006BE18515");
 
             entity.ToTable("MedicineHauMPN");
 
-            entity.Property(e => e.MedicineHauMpnid)
-                .ValueGeneratedNever()
-                .HasColumnName("MedicineHauMPNId");
+            entity.Property(e => e.MedicineHauMpnid).HasColumnName("MedicineHauMPNId");
             entity.Property(e => e.MedicineBatchHauMpnid).HasColumnName("MedicineBatchHauMPNId");
             entity.Property(e => e.MedicineExpirationDate).HasColumnType("datetime");
-            entity.Property(e => e.MedicineManufactureDate).HasMaxLength(1);
-            entity.Property(e => e.MedicineName).HasMaxLength(1);
-            entity.Property(e => e.MedicineType).HasMaxLength(1);
-            entity.Property(e => e.MedicineUnit).HasMaxLength(1);
-            entity.Property(e => e.MedicineUsageInstructions).HasMaxLength(1);
-            entity.Property(e => e.MedicineUsagePurpose).HasMaxLength(1);
+            entity.Property(e => e.MedicineManufactureDate).HasMaxLength(255);
+            entity.Property(e => e.MedicineName).HasMaxLength(255);
+            entity.Property(e => e.MedicineType).HasMaxLength(255);
+            entity.Property(e => e.MedicineUnit).HasMaxLength(255);
+            entity.Property(e => e.MedicineUsageInstructions).HasMaxLength(255);
+            entity.Property(e => e.MedicineUsagePurpose).HasMaxLength(255);
 
             entity.HasOne(d => d.MedicineBatchHauMpn).WithMany(p => p.MedicineHauMpns)
                 .HasForeignKey(d => d.MedicineBatchHauMpnid)
@@ -355,36 +335,32 @@ public partial class SU25_PRN222_SE1709_G1_SchoolMedicalContext : DbContext
 
         modelBuilder.Entity<Role>(entity =>
         {
-            entity.HasKey(e => e.RoleId).HasName("PK__Role__760965CC3CE331A1");
+            entity.HasKey(e => e.RoleId).HasName("PK__Role__760965CC50C25F1B");
 
             entity.ToTable("Role");
 
-            entity.Property(e => e.RoleId)
-                .ValueGeneratedNever()
-                .HasColumnName("role_id");
+            entity.Property(e => e.RoleId).HasColumnName("role_id");
             entity.Property(e => e.RoleName)
-                .HasMaxLength(1)
+                .HasMaxLength(255)
                 .HasColumnName("role_name");
         });
 
         modelBuilder.Entity<StudentsHoaLq>(entity =>
         {
-            entity.HasKey(e => e.StudentsHoaLqid).HasName("PK__Students__1DB3985E26C4559A");
+            entity.HasKey(e => e.StudentsHoaLqid).HasName("PK__Students__1DB3985E09A0A1E1");
 
             entity.ToTable("StudentsHoaLQ");
 
-            entity.Property(e => e.StudentsHoaLqid)
-                .ValueGeneratedNever()
-                .HasColumnName("StudentsHoaLQId");
+            entity.Property(e => e.StudentsHoaLqid).HasColumnName("StudentsHoaLQId");
             entity.Property(e => e.ClassId).HasColumnName("class_id");
             entity.Property(e => e.SdtNguoigiamho)
-                .HasMaxLength(1)
+                .HasMaxLength(255)
                 .HasColumnName("sdt_nguoigiamho");
             entity.Property(e => e.StudentCode)
-                .HasMaxLength(1)
+                .HasMaxLength(255)
                 .HasColumnName("student_code");
             entity.Property(e => e.StudentFullName)
-                .HasMaxLength(1)
+                .HasMaxLength(255)
                 .HasColumnName("student_fullName");
             entity.Property(e => e.UserId).HasColumnName("user_id");
 
@@ -432,28 +408,26 @@ public partial class SU25_PRN222_SE1709_G1_SchoolMedicalContext : DbContext
 
         modelBuilder.Entity<User>(entity =>
         {
-            entity.HasKey(e => e.UserId).HasName("PK__User__B9BE370F41022032");
+            entity.HasKey(e => e.UserId).HasName("PK__User__B9BE370F371109F9");
 
             entity.ToTable("User");
 
-            entity.Property(e => e.UserId)
-                .ValueGeneratedNever()
-                .HasColumnName("user_id");
+            entity.Property(e => e.UserId).HasColumnName("user_id");
             entity.Property(e => e.RoleId).HasColumnName("role_id");
             entity.Property(e => e.UserAccount)
-                .HasMaxLength(1)
+                .HasMaxLength(255)
                 .HasColumnName("user_account");
             entity.Property(e => e.UserAddress)
-                .HasMaxLength(1)
+                .HasMaxLength(255)
                 .HasColumnName("user_address");
             entity.Property(e => e.UserHashPassword)
-                .HasMaxLength(1)
+                .HasMaxLength(255)
                 .HasColumnName("user_hashPassword");
             entity.Property(e => e.UserName)
-                .HasMaxLength(1)
+                .HasMaxLength(255)
                 .HasColumnName("user_name");
             entity.Property(e => e.UserPhone)
-                .HasMaxLength(1)
+                .HasMaxLength(255)
                 .HasColumnName("user_phone");
 
             entity.HasOne(d => d.Role).WithMany(p => p.Users)
@@ -463,14 +437,12 @@ public partial class SU25_PRN222_SE1709_G1_SchoolMedicalContext : DbContext
 
         modelBuilder.Entity<VaccinationConsentFormsTinHt>(entity =>
         {
-            entity.HasKey(e => e.VaccinationConsentFormTinHtid).HasName("PK__Vaccinat__04F552313AE529B0");
+            entity.HasKey(e => e.VaccinationConsentFormTinHtid).HasName("PK__Vaccinat__04F55231683AAEB0");
 
             entity.ToTable("VaccinationConsentFormsTinHT");
 
-            entity.Property(e => e.VaccinationConsentFormTinHtid)
-                .ValueGeneratedNever()
-                .HasColumnName("VaccinationConsentFormTinHTId");
-            entity.Property(e => e.Notes).HasMaxLength(1);
+            entity.Property(e => e.VaccinationConsentFormTinHtid).HasColumnName("VaccinationConsentFormTinHTId");
+            entity.Property(e => e.Notes).HasMaxLength(255);
             entity.Property(e => e.SubmissionTime).HasColumnType("datetime");
 
             entity.HasOne(d => d.Parent).WithMany(p => p.VaccinationConsentFormsTinHts)
@@ -488,16 +460,14 @@ public partial class SU25_PRN222_SE1709_G1_SchoolMedicalContext : DbContext
 
         modelBuilder.Entity<VaccinationRecordsTinHt>(entity =>
         {
-            entity.HasKey(e => e.VaccinationRecordTinHtid).HasName("PK__Vaccinat__A5DAE21167A4CDC0");
+            entity.HasKey(e => e.VaccinationRecordTinHtid).HasName("PK__Vaccinat__A5DAE211244049CE");
 
             entity.ToTable("VaccinationRecordsTinHT");
 
-            entity.Property(e => e.VaccinationRecordTinHtid)
-                .ValueGeneratedNever()
-                .HasColumnName("VaccinationRecordTinHTId");
-            entity.Property(e => e.AdverseSymptoms).HasMaxLength(1);
-            entity.Property(e => e.PostVaccinationCondition).HasMaxLength(1);
-            entity.Property(e => e.PreVaccinationCondition).HasMaxLength(1);
+            entity.Property(e => e.VaccinationRecordTinHtid).HasColumnName("VaccinationRecordTinHTId");
+            entity.Property(e => e.AdverseSymptoms).HasMaxLength(255);
+            entity.Property(e => e.PostVaccinationCondition).HasMaxLength(255);
+            entity.Property(e => e.PreVaccinationCondition).HasMaxLength(255);
             entity.Property(e => e.VaccinationDateTime).HasColumnType("datetime");
             entity.Property(e => e.VaccineCampaignTinHtid).HasColumnName("VaccineCampaignTinHTId");
 
@@ -520,22 +490,20 @@ public partial class SU25_PRN222_SE1709_G1_SchoolMedicalContext : DbContext
 
         modelBuilder.Entity<VaccineCampaignsTinHt>(entity =>
         {
-            entity.HasKey(e => e.VaccineCampaignTinHtid).HasName("PK__VaccineC__DC694581720CF4C0");
+            entity.HasKey(e => e.VaccineCampaignTinHtid).HasName("PK__VaccineC__DC694581EEC20043");
 
             entity.ToTable("VaccineCampaignsTinHT");
 
-            entity.Property(e => e.VaccineCampaignTinHtid)
-                .ValueGeneratedNever()
-                .HasColumnName("VaccineCampaignTinHTId");
-            entity.Property(e => e.CampaignDescription).HasMaxLength(1);
-            entity.Property(e => e.CampaignName).HasMaxLength(1);
+            entity.Property(e => e.VaccineCampaignTinHtid).HasColumnName("VaccineCampaignTinHTId");
+            entity.Property(e => e.CampaignDescription).HasMaxLength(255);
+            entity.Property(e => e.CampaignName).HasMaxLength(255);
             entity.Property(e => e.EndDateTime).HasColumnType("datetime");
-            entity.Property(e => e.Location).HasMaxLength(1);
+            entity.Property(e => e.Location).HasMaxLength(255);
             entity.Property(e => e.RegistrationEndAt).HasColumnType("datetime");
             entity.Property(e => e.RegistrationStartAt).HasColumnType("datetime");
             entity.Property(e => e.StartDateTime).HasColumnType("datetime");
-            entity.Property(e => e.VaccineDescription).HasMaxLength(1);
-            entity.Property(e => e.VaccineName).HasMaxLength(1);
+            entity.Property(e => e.VaccineDescription).HasMaxLength(255);
+            entity.Property(e => e.VaccineName).HasMaxLength(255);
         });
 
         OnModelCreatingPartial(modelBuilder);

@@ -11,7 +11,7 @@ public partial class MedicationTraiNn
 
     public int? DonguiId { get; set; }
 
-    public int? MedicineName { get; set; }
+    public string MedicineName { get; set; }
 
     public int? Quantity { get; set; }
 

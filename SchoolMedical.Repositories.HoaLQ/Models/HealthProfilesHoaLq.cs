@@ -2,40 +2,38 @@
 #nullable disable
 using System;
 using System.Collections.Generic;
-using System.ComponentModel;
 
 namespace SchoolMedical.Repositories.HoaLQ.Models;
 
 public partial class HealthProfilesHoaLq
 {
-    
     public int HealthProfileHoaLqid { get; set; }
 
     public int? StudentId { get; set; }
-    [DisplayName("Cân nặng (kg)")]
+
     public decimal? Weight { get; set; }
-    [DisplayName("Chiều cao (cm)")]
+
     public decimal? Height { get; set; }
-    [DisplayName("Thị lực")]
+
     public int? Sight { get; set; }
-    [DisplayName("Thính lực")]
+
     public int? Hearing { get; set; }
-[DisplayName("Huyết áp")]
+
     public int? BloodPressure { get; set; }
-[DisplayName("Dị ứng")]
+
     public string Allergy { get; set; }
-[DisplayName("Tình trạng mãn tính")]
+
     public string ChronicDisease { get; set; }
-[DisplayName("Tiền sử bệnh")]
+
     public string MedicalHistory { get; set; }
-[DisplayName("Thuốc đang dùng")]
+
     public string CurrentMedical { get; set; }
-[DisplayName("Nhóm máu")]
+
     public string BloodType { get; set; }
-[DisplayName("Giới tính")]
+
     public bool Sex { get; set; }
-[DisplayName("Ngày sinh")]
+
     public DateOnly? DateOfBirth { get; set; }
-[DisplayName("Học sinh")]
+
     public virtual StudentsHoaLq Student { get; set; }
 }
