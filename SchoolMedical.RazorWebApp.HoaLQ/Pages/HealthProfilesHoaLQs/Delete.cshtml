@@ -6,80 +6,106 @@
 }
 
 <div class="container py-5 border-1">
-<div class="card shadow-lg rounded-4 bg-gradient border-0">
-    <div class="mb-4">
-        <div class="card-header border-0 pb-0">
-            <h1 class="fw-bold text-danger text-xl-start" style="font-size: 25px">
-                <svg xmlns="http://www.w3.org/2000/svg" width="35" height="25" fill="currentColor" class="bi bi-trash3" viewBox="0 0 16 16">
-                    <path d="M6.5 1h3a.5.5 0 0 1 .5.5v1H6v-1a.5.5 0 0 1 .5-.5M11 2.5v-1A1.5 1.5 0 0 0 9.5 0h-3A1.5 1.5 0 0 0 5 1.5v1H1.5a.5.5 0 0 0 0 1h.538l.853 10.66A2 2 0 0 0 4.885 16h6.23a2 2 0 0 0 1.994-1.84l.853-10.66h.538a.5.5 0 0 0 0-1zm1.958 1-.846 10.58a1 1 0 0 1-.997.92h-6.23a1 1 0 0 1-.997-.92L3.042 3.5zm-7.487 1a.5.5 0 0 1 .528.47l.5 8.5a.5.5 0 0 1-.998.06L5 5.03a.5.5 0 0 1 .47-.53Zm5.058 0a.5.5 0 0 1 .47.53l-.5 8.5a.5.5 0 1 1-.998-.06l.5-8.5a.5.5 0 0 1 .528-.47M8 4.5a.5.5 0 0 1 .5.5v8.5a.5.5 0 0 1-1 0V5a.5.5 0 0 1 .5-.5"/>
-                </svg> Delete Health Profile
-            </h1>
-        </div>
+    <div class="card shadow-lg rounded-4 bg-gradient border-0">
+        <div class="mb-4">
+            <div class="card-header border-0 pb-0">
+                <h1 class="fw-bold text-danger text-xl-start" style="font-size: 25px">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="35" height="25" fill="currentColor" class="bi bi-trash3" viewBox="0 0 16 16">
+                        <path d="M6.5 1h3a.5.5 0 0 1 .5.5v1H6v-1a.5.5 0 0 1 .5-.5M11 2.5v-1A1.5 1.5 0 0 0 9.5 0h-3A1.5 1.5 0 0 0 5 1.5v1H1.5a.5.5 0 0 0 0 1h.538l.853 10.66A2 2 0 0 0 4.885 16h6.23a2 2 0 0 0 1.994-1.84l.853-10.66h.538a.5.5 0 0 0 0-1zm1.958 1-.846 10.58a1 1 0 0 1-.997.92h-6.23a1 1 0 0 1-.997-.92L3.042 3.5zm-7.487 1a.5.5 0 0 1 .528.47l.5 8.5a.5.5 0 0 1-.998.06L5 5.03a.5.5 0 0 1 .47-.53Zm5.058 0a.5.5 0 0 1 .47.53l-.5 8.5a.5.5 0 1 1-.998-.06l.5-8.5a.5.5 0 0 1 .528-.47M8 4.5a.5.5 0 0 1 .5.5v8.5a.5.5 0 0 1-1 0V5a.5.5 0 0 1 .5-.5"/>
+                    </svg> Delete Health Profile
+                </h1>
+            </div>
         
-        <hr/>
-    </div>
-
-    <div class="row gy-3">
-        <div class="col-md-12">
-            <strong>@Html.DisplayNameFor(model => model.HealthProfilesHoaLq.Student):</strong>
-            <span class="ms-2">@Html.DisplayFor(model => model.HealthProfilesHoaLq.Student.StudentsHoaLqid)</span>
-        </div>
-        <div class="col-md-6">
-            <strong>@Html.DisplayNameFor(model => model.HealthProfilesHoaLq.Weight):</strong>
-            <span class="ms-2">@Html.DisplayFor(model => model.HealthProfilesHoaLq.Weight)</span>
-        </div>
-        <div class="col-md-6">
-            <strong>@Html.DisplayNameFor(model => model.HealthProfilesHoaLq.Height):</strong>
-            <span class="ms-2">@Html.DisplayFor(model => model.HealthProfilesHoaLq.Height)</span>
-        </div>
-        <div class="col-md-6">
-            <strong>@Html.DisplayNameFor(model => model.HealthProfilesHoaLq.Sight):</strong>
-            <span class="ms-2">@Html.DisplayFor(model => model.HealthProfilesHoaLq.Sight)</span>
-        </div>
-        <div class="col-md-6">
-            <strong>@Html.DisplayNameFor(model => model.HealthProfilesHoaLq.Hearing):</strong>
-            <span class="ms-2">@Html.DisplayFor(model => model.HealthProfilesHoaLq.Hearing)</span>
-        </div>
-        <div class="col-md-6">
-            <strong>@Html.DisplayNameFor(model => model.HealthProfilesHoaLq.BloodPressure):</strong>
-            <span class="ms-2">@Html.DisplayFor(model => model.HealthProfilesHoaLq.BloodPressure)</span>
-        </div>
-        <div class="col-md-6">
-            <strong>@Html.DisplayNameFor(model => model.HealthProfilesHoaLq.Allergy):</strong>
-            <span class="ms-2">@Html.DisplayFor(model => model.HealthProfilesHoaLq.Allergy)</span>
-        </div>
-        <div class="col-md-6">
-            <strong>@Html.DisplayNameFor(model => model.HealthProfilesHoaLq.ChronicDisease):</strong>
-            <span class="ms-2">@Html.DisplayFor(model => model.HealthProfilesHoaLq.ChronicDisease)</span>
-        </div>
-        <div class="col-md-6">
-            <strong>@Html.DisplayNameFor(model => model.HealthProfilesHoaLq.MedicalHistory):</strong>
-            <span class="ms-2">@Html.DisplayFor(model => model.HealthProfilesHoaLq.MedicalHistory)</span>
-        </div>
-        <div class="col-md-6">
-            <strong>@Html.DisplayNameFor(model => model.HealthProfilesHoaLq.CurrentMedical):</strong>
-            <span class="ms-2">@Html.DisplayFor(model => model.HealthProfilesHoaLq.CurrentMedical)</span>
-        </div>
-        <div class="col-md-6">
-            <strong>@Html.DisplayNameFor(model => model.HealthProfilesHoaLq.BloodType):</strong>
-            <span class="ms-2">@Html.DisplayFor(model => model.HealthProfilesHoaLq.BloodType)</span>
-        </div>
-        <div class="col-md-6">
-            <strong>@Html.DisplayNameFor(model => model.HealthProfilesHoaLq.Sex):</strong>
-            <span class="ms-2">
-                @(Model.HealthProfilesHoaLq.Sex ? "Nam" : "Nữ")
-            </span>        </div>
-        <div class="col-md-6">
-            <strong>@Html.DisplayNameFor(model => model.HealthProfilesHoaLq.DateOfBirth):</strong>
-            <span class="ms-2">@Html.DisplayFor(model => model.HealthProfilesHoaLq.DateOfBirth)</span>
+            <hr/>
         </div>
 
-    </div>
+        <div class="row gy-3">
+            <div class="col-md-12">
+                <strong>@Html.DisplayNameFor(model => model.HealthProfilesHoaLq.Student):</strong>
+                <span class="ms-2">@Html.DisplayFor(model => model.HealthProfilesHoaLq.Student.StudentsHoaLqid)</span>
+            </div>
+            <div class="col-md-6">
+                <strong>@Html.DisplayNameFor(model => model.HealthProfilesHoaLq.Weight):</strong>
+                <span class="ms-2">@Html.DisplayFor(model => model.HealthProfilesHoaLq.Weight)</span>
+            </div>
+            <div class="col-md-6">
+                <strong>@Html.DisplayNameFor(model => model.HealthProfilesHoaLq.Height):</strong>
+                <span class="ms-2">@Html.DisplayFor(model => model.HealthProfilesHoaLq.Height)</span>
+            </div>
+            <div class="col-md-6">
+                <strong>@Html.DisplayNameFor(model => model.HealthProfilesHoaLq.Sight):</strong>
+                <span class="ms-2">@Html.DisplayFor(model => model.HealthProfilesHoaLq.Sight)</span>
+            </div>
+            <div class="col-md-6">
+                <strong>@Html.DisplayNameFor(model => model.HealthProfilesHoaLq.Hearing):</strong>
+                <span class="ms-2">@Html.DisplayFor(model => model.HealthProfilesHoaLq.Hearing)</span>
+            </div>
+            <div class="col-md-6">
+                <strong>@Html.DisplayNameFor(model => model.HealthProfilesHoaLq.BloodPressure):</strong>
+                <span class="ms-2">@Html.DisplayFor(model => model.HealthProfilesHoaLq.BloodPressure)</span>
+            </div>
+            <div class="col-md-6">
+                <strong>@Html.DisplayNameFor(model => model.HealthProfilesHoaLq.Allergy):</strong>
+                <span class="ms-2">@Html.DisplayFor(model => model.HealthProfilesHoaLq.Allergy)</span>
+            </div>
+            <div class="col-md-6">
+                <strong>@Html.DisplayNameFor(model => model.HealthProfilesHoaLq.ChronicDisease):</strong>
+                <span class="ms-2">@Html.DisplayFor(model => model.HealthProfilesHoaLq.ChronicDisease)</span>
+            </div>
+            <div class="col-md-6">
+                <strong>@Html.DisplayNameFor(model => model.HealthProfilesHoaLq.MedicalHistory):</strong>
+                <span class="ms-2">@Html.DisplayFor(model => model.HealthProfilesHoaLq.MedicalHistory)</span>
+            </div>
+            <div class="col-md-6">
+                <strong>@Html.DisplayNameFor(model => model.HealthProfilesHoaLq.CurrentMedical):</strong>
+                <span class="ms-2">@Html.DisplayFor(model => model.HealthProfilesHoaLq.CurrentMedical)</span>
+            </div>
+            <div class="col-md-6">
+                <strong>@Html.DisplayNameFor(model => model.HealthProfilesHoaLq.BloodType):</strong>
+                <span class="ms-2">@Html.DisplayFor(model => model.HealthProfilesHoaLq.BloodType)</span>
+            </div>
+            <div class="col-md-6">
+                <strong>@Html.DisplayNameFor(model => model.HealthProfilesHoaLq.Sex):</strong>
+                <span class="ms-2">
+                    @(Model.HealthProfilesHoaLq.Sex ? "Nam" : "Nữ")
+                </span>        </div>
+            <div class="col-md-6">
+                <strong>@Html.DisplayNameFor(model => model.HealthProfilesHoaLq.DateOfBirth):</strong>
+                <span class="ms-2">@Html.DisplayFor(model => model.HealthProfilesHoaLq.DateOfBirth)</span>
+            </div>
 
-    <form method="post">
-        <input type="hidden" asp-for="HealthProfilesHoaLq.HealthProfileHoaLqid" />
-        <input type="submit" value="Delete" class="btn btn-danger" /> 
-        <a asp-page="./Index" class="btn btn-secondary">Back to List</a>
-    </form>
+        </div>
+
+        <form method="post">
+            <input type="hidden" asp-for="HealthProfilesHoaLq.HealthProfileHoaLqid" />
+            <input type="submit" value="Delete" class="btn btn-danger" /> 
+            <input type="button" id="btnHubDelete" value="Delete by SignalRHub" class="btn btn-primary" />
+            <a asp-page="./Index" class="btn btn-secondary">Back to List</a>
+        </form>
     </div>
 </div>
+<script src="~/js/signalr/signalr.js"></script>
+<script>
+    "use strict";
+
+    var connection = new signalR.HubConnectionBuilder().withUrl("/SchoolMedicalHub").build();
+
+    connection.start().then(function () {
+        console.log("Connected to the SignalR Hub");
+    }).catch(function (err) {
+        return console.error(err.toString());
+    });
+
+    document.getElementById("btnHubDelete").addEventListener("click", function (event) {
+
+
+        var dataObj = document.getElementById("HealthProfilesHoaLq_HealthProfileHoaLqid").value;
+        console.log(dataObj);
+
+        connection.invoke("HubDelete_HealthProfile", dataObj).catch(function (err) {
+            return console.error(err.toString());
+        });
+        event.preventDefault();
+    });
+
+</script>

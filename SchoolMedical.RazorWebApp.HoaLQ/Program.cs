@@ -1,4 +1,5 @@
 using Microsoft.AspNetCore.Authentication.Cookies;
+using SchoolMedical.RazorWebApp.HoaLQ.Hubs;
 using SchoolMedical.Services.HoaLQ;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -10,6 +11,7 @@ builder.Services.AddScoped<IHealthProfilesHoaLqService, HealthProfilesHoaLqServi
 builder.Services.AddScoped<IStudentHoaLQService, StudentHoaLQService>();
 builder.Services.AddScoped<ISystemUserAccountService, SystemUserAccountService>();
 builder.Services.AddSession();
+builder.Services.AddSignalR();
 builder.Services.AddAuthentication(CookieAuthenticationDefaults.AuthenticationScheme)
     .AddCookie(options =>
     {
@@ -29,7 +31,7 @@ app.UseSession();
 app.UseHttpsRedirection();
 app.UseStaticFiles();
 app.UseRouting();
-
+app.MapHub<SchoolMedicalHub>("/SchoolMedicalHub");
 app.UseAuthorization();
 
 app.MapRazorPages().RequireAuthorization();
