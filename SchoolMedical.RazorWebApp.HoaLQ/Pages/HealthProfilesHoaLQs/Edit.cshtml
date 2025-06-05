@@ -113,6 +113,7 @@
             <!-- Buttons -->
             <div class="mt-4">
                 <button type="submit" class="btn btn-success">Save</button>
+                <input type="button" id="btnHubUpdate" class="btn btn-primary" value="Update by SignalR"/>
                 <a asp-page="./Index" class="btn btn-secondary ms-2">Back to List</a>
             </div>
         </form>
@@ -122,3 +123,40 @@
 @section Scripts {
     @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
 }
+<script src="~/js/signalr/signalr.js"></script>
+<script>
+    "use strict";
+
+    var connection = new signalR.HubConnectionBuilder().withUrl("/SchoolMedicalHub").build();
+
+    connection.start().then(function () {
+        console.log("Connected to the SignalR Hub");
+    }).catch(function (err) {
+        return console.error(err.toString());
+    });
+
+    document.getElementById("btnHubUpdate").addEventListener("click", function (event) {
+   var dataObj = JSON.stringify({
+       Weight: document.getElementById("HealthProfilesHoaLq_Weight").value,
+       Height: document.getElementById("HealthProfilesHoaLq_Height").value,
+       Sight: document.getElementById("HealthProfilesHoaLq_Sight").value,
+       Hearing: document.getElementById("HealthProfilesHoaLq_Hearing").value,
+       BloodPressure: document.getElementById("HealthProfilesHoaLq_BloodPressure").value,
+       BloodType: document.getElementById("HealthProfilesHoaLq_BloodType").value,
+       Sex: document.getElementById("HealthProfilesHoaLq_Sex").value,
+       DateOfBirth: document.getElementById("HealthProfilesHoaLq_DateOfBirth").value,
+       Allergy: document.getElementById("HealthProfilesHoaLq_Allergy").value,
+       ChronicDisease: document.getElementById("HealthProfilesHoaLq_ChronicDisease").value,
+       MedicalHistory: document.getElementById("HealthProfilesHoaLq_MedicalHistory").value,
+       CurrentMedical: document.getElementById("HealthProfilesHoaLq_CurrentMedical").value
+   })
+        console.log(dataObj);
+   connection.invoke("HubUpdate_HealthProfile", dataObj).then(function (){
+       window.location.href = "/HealthProfilesHoaLQs/Index";
+   }).catch(function (err) {
+       return console.error(err.toString());
+   });
+   event.preventDefault()
+    });
+</script>
+

@@ -89,4 +89,33 @@
         $('#HealthProfileId').find(`tr[id='${HealthProfileHoaLqid}']`).remove();
     });
 
+    connection.on("Receiver_CreateHealthProfile", function (healthProfile) {
+        console.log(healthProfile);
+        var sexText = healthProfile.sex ? "Nam" : "Nữ";
+        var fullName = healthProfile.student && healthProfile.student.studentFullName
+            ? healthProfile.student.studentFullName
+            : "Không rõ";
+        var newRow = `
+        <tr id="${healthProfile.healthProfileHoaLqid}">
+            <td>${healthProfile.weight}</td>
+            <td>${healthProfile.height}</td>
+            <td>${healthProfile.sight}</td>
+            <td>${healthProfile.hearing}</td>
+            <td>${healthProfile.bloodType}</td>
+            <td>${sexText}</td>
+            <td>${healthProfile.dateOfBirth}</td>
+            <td>${fullName}</td>
+            <td>
+                <a href="/HealthProfilesHoaLQs/Edit/${healthProfile.healthProfileHoaLqid}" class="btn btn-sm btn-warning me-1">Edit</a>
+                <a href="/HealthProfilesHoaLQs/Details/${healthProfile.healthProfileHoaLqid}" class="btn btn-sm btn-info text-white me-1">Details</a>
+                <a href="/HealthProfilesHoaLQs/Delete/${healthProfile.healthProfileHoaLqid}" class="btn btn-sm btn-danger">Delete</a>
+            </td>
+        </tr>
+        `;
+        $('#HealthProfileId').append(newRow);
+    });
+    
+    connection.on("Receiver_UpdateHealthProfile", function (healthProfile) {
+        console.log(healthProfile);
+    })
 </script>
