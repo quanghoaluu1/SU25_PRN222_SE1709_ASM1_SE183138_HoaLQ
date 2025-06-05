@@ -34,7 +34,7 @@
         <th>Actions</th>
     </tr>
     </thead>
-    <tbody id="HealthProfileTBodyId">
+    <tbody id="HealthProfileId">
     @foreach (var item in Model.HealthProfilesHoaLq)
     {
         <tr id="@item.HealthProfileHoaLqid">
@@ -86,7 +86,7 @@
 
     connection.on("Receiver_DeleteHealthProfile", function (HealthProfileHoaLqid) {
         //alert($(`#${HealthProfileHoaLqid}`).value);
-        $('#HealthProfileTBodyId').find(`tr[id='${HealthProfileHoaLqid}']`).remove();
+        $('#HealthProfileId').find(`tr[id='${HealthProfileHoaLqid}']`).remove();
     });
 
 </script>

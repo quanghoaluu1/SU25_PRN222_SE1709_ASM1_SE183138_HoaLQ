@@ -1,0 +1,12 @@
+{
+  "name": "su25_prn222_se1709_asm1_se183138_hoalq",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": ""
+}

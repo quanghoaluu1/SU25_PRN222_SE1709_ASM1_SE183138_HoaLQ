@@ -10,16 +10,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="7107faa1-db65-471d-bbc9-b22c3b0b0d9d" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/SchoolMedical.RazorWebApp.HoaLQ/Pages/HealthProfilesHoaLQs/Create.cshtml.cs" beforeDir="false" afterPath="$PROJECT_DIR$/SchoolMedical.RazorWebApp.HoaLQ/Pages/HealthProfilesHoaLQs/Create.cshtml.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SchoolMedical.RazorWebApp.HoaLQ/Pages/HealthProfilesHoaLQs/Delete.cshtml.cs" beforeDir="false" afterPath="$PROJECT_DIR$/SchoolMedical.RazorWebApp.HoaLQ/Pages/HealthProfilesHoaLQs/Delete.cshtml.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SchoolMedical.RazorWebApp.HoaLQ/Pages/HealthProfilesHoaLQs/Details.cshtml.cs" beforeDir="false" afterPath="$PROJECT_DIR$/SchoolMedical.RazorWebApp.HoaLQ/Pages/HealthProfilesHoaLQs/Details.cshtml.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SchoolMedical.RazorWebApp.HoaLQ/Pages/HealthProfilesHoaLQs/Edit.cshtml.cs" beforeDir="false" afterPath="$PROJECT_DIR$/SchoolMedical.RazorWebApp.HoaLQ/Pages/HealthProfilesHoaLQs/Edit.cshtml.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SchoolMedical.RazorWebApp.HoaLQ/Pages/HealthProfilesHoaLQs/Index.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/SchoolMedical.RazorWebApp.HoaLQ/Pages/HealthProfilesHoaLQs/Index.cshtml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SchoolMedical.RazorWebApp.HoaLQ/Pages/Shared/_Layout.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/SchoolMedical.RazorWebApp.HoaLQ/Pages/Shared/_Layout.cshtml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SchoolMedical.RazorWebApp.HoaLQ/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/SchoolMedical.RazorWebApp.HoaLQ/Program.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SchoolMedical.Repositories.HoaLQ/DBContext/SU25_PRN222_SE1709_G1_SchoolMedicalContext.cs" beforeDir="false" afterPath="$PROJECT_DIR$/SchoolMedical.Repositories.HoaLQ/DBContext/SU25_PRN222_SE1709_G1_SchoolMedicalContext.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SchoolMedical.Repositories.HoaLQ/Models/HealthProfilesHoaLq.cs" beforeDir="false" afterPath="$PROJECT_DIR$/SchoolMedical.Repositories.HoaLQ/Models/HealthProfilesHoaLq.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SchoolMedical.Repositories.HoaLQ/Models/MedicationTraiNn.cs" beforeDir="false" afterPath="$PROJECT_DIR$/SchoolMedical.Repositories.HoaLQ/Models/MedicationTraiNn.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.SU25_PRN222_SE1709_ASM1_SE183138_HoaLQ/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.SU25_PRN222_SE1709_ASM1_SE183138_HoaLQ/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -33,6 +24,7 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="CSS File" />
+        <option value="JavaScript File" />
       </list>
     </option>
   </component>
@@ -52,11 +44,20 @@
   }
 }</component>
   <component name="HighlightingSettingsPerFile">
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/036a2cb2061f4945ba3e14aafb38c7a86e928/28/d6fabf37/PageActionInvoker.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/036a2cb2061f4945ba3e14aafb38c7a86e928/62/37721a53/PageModel.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/036a2cb2061f4945ba3e14aafb38c7a86e928/de/1a800b78/ExecutorFactory.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/2b90705926ae4f10aa01bbe3f1025828c90908/a6/c1bbd1ce/ExecutionContext.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/2b90705926ae4f10aa01bbe3f1025828c90908/d0/7f919ae9/Task`1.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/2b90705926ae4f10aa01bbe3f1025828c90908/e7/d4484177/AsyncTaskMethodBuilder`1.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/93eb55f4ef734d968af9f3dbfa91bee644928/a3/c6fdf4b3/InputTagHelper.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/c0e700bdc8304487aa7af257275bdf4149920/d9/e3493576/HttpContextAccessor.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/f0f1fcefa3d345fda97062807fd64b36b0908/94/b3184fc9/ExpressionMetadataProvider.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/f0f1fcefa3d345fda97062807fd64b36b0908/d8/d832d053/ModelExplorer.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/SchoolMedical.RazorWebApp.HoaLQ/package-lock.json" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/SchoolMedical.RazorWebApp.HoaLQ/wwwroot/lib/bootstrap/dist/js/bootstrap.bundle.js.map" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/SchoolMedical.RazorWebApp.HoaLQ/wwwroot/lib/bootstrap/dist/js/bootstrap.bundle.min.js.map" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/SchoolMedical.Services.HoaLQ/HealthProfilesHoaLqService.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="MetaFilesCheckinStateConfiguration" checkMetaFiles="true" />
   <component name="ProjectColorInfo">{
@@ -73,24 +74,24 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    ".NET Launch Settings Profile.SchoolMedical.RazorWebApp.HoaLQ: IIS Express.executor": "Debug",
-    "ModuleVcsDetector.initialDetectionPerformed": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.git.unshallow": "true",
-    "git-widget-placeholder": "master",
-    "last_opened_file_path": "C:/Users/quang/OneDrive/Máy tính/metro-ticket-backend",
-    "list.type.of.created.stylesheet": "CSS",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "preferences.keymap",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;.NET Launch Settings Profile.SchoolMedical.RazorWebApp.HoaLQ: IIS Express.executor&quot;: &quot;Run&quot;,
+    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/quang/OneDrive/Máy tính/metro-ticket-backend&quot;,
+    &quot;list.type.of.created.stylesheet&quot;: &quot;CSS&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.keymap&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RunManager" selected=".NET Launch Settings Profile.SchoolMedical.RazorWebApp.HoaLQ: IIS Express">
     <configuration name="SchoolMedical.RazorWebApp.HoaLQ: IIS Express" type="LaunchSettings" factoryName=".NET Launch Settings Profile">
       <option name="LAUNCH_PROFILE_PROJECT_FILE_PATH" value="$PROJECT_DIR$/SchoolMedical.RazorWebApp.HoaLQ/SchoolMedical.RazorWebApp.HoaLQ.csproj" />
@@ -161,7 +162,10 @@
       <workItem from="1748400312516" duration="22000" />
       <workItem from="1748486221551" duration="22000" />
       <workItem from="1748501905768" duration="2430000" />
-      <workItem from="1748506715714" duration="6590000" />
+      <workItem from="1748506715714" duration="6887000" />
+      <workItem from="1748515084123" duration="19000" />
+      <workItem from="1748852759641" duration="7635000" />
+      <workItem from="1749004095030" duration="11000" />
     </task>
     <task id="LOCAL-00001" summary="Add HealthProfilesHoaLqRepository and vcs.xml configuration">
       <option name="closed" value="true" />
@@ -223,19 +227,6 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="DotNet Breakpoints">
           <url>file://$PROJECT_DIR$/SchoolMedical.RazorWebApp.HoaLQ/Pages/HealthProfilesHoaLQs/Edit.cshtml.cs</url>
-          <line>33</line>
-          <properties documentPath="C:\Users\quang\OneDrive\Máy tính\SU25_PRN222_SE1709_ASM1_SE183138_HoaLQ\SchoolMedical.RazorWebApp.HoaLQ\Pages\HealthProfilesHoaLQs\Edit.cshtml.cs" containingFunctionPresentation="Method 'OnPostAsync'">
-            <startOffsets>
-              <option value="1107" />
-            </startOffsets>
-            <endOffsets>
-              <option value="1108" />
-            </endOffsets>
-          </properties>
-          <option name="timeStamp" value="5" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/SchoolMedical.RazorWebApp.HoaLQ/Pages/HealthProfilesHoaLQs/Edit.cshtml.cs</url>
           <line>24</line>
           <properties documentPath="C:\Users\quang\OneDrive\Máy tính\SU25_PRN222_SE1709_ASM1_SE183138_HoaLQ\SchoolMedical.RazorWebApp.HoaLQ\Pages\HealthProfilesHoaLQs\Edit.cshtml.cs" containingFunctionPresentation="Property 'HealthProfilesHoaLq'">
             <startOffsets>
@@ -246,6 +237,19 @@
             </endOffsets>
           </properties>
           <option name="timeStamp" value="6" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/SchoolMedical.RazorWebApp.HoaLQ/Pages/HealthProfilesHoaLQs/Edit.cshtml.cs</url>
+          <line>33</line>
+          <properties documentPath="C:\Users\quang\OneDrive\Máy tính\SU25_PRN222_SE1709_ASM1_SE183138_HoaLQ\SchoolMedical.RazorWebApp.HoaLQ\Pages\HealthProfilesHoaLQs\Edit.cshtml.cs" containingFunctionPresentation="Method 'OnPostAsync'">
+            <startOffsets>
+              <option value="1107" />
+            </startOffsets>
+            <endOffsets>
+              <option value="1108" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="9" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
