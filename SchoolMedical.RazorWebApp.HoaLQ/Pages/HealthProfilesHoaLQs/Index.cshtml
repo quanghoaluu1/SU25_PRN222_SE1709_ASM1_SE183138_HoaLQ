@@ -38,28 +38,28 @@
     @foreach (var item in Model.HealthProfilesHoaLq)
     {
         <tr id="@item.HealthProfileHoaLqid">
-            <td>
+            <td id="weight">
                 @Html.DisplayFor(modelItem => item.Weight)
             </td>
-            <td>
+            <td id="height">
                 @Html.DisplayFor(modelItem => item.Height)
             </td>
-            <td>
+            <td id="sight">
                 @Html.DisplayFor(modelItem => item.Sight)
             </td>
-            <td>
+            <td id="hearing">
                 @Html.DisplayFor(modelItem => item.Hearing)
             </td>
-            <td>
+            <td id="bloodType">
                 @Html.DisplayFor(modelItem => item.BloodType)
             </td>
-            <td>
+            <td id="sex">
                 @(item.Sex == true ? "Nam" : "Nữ")
             </td>
-            <td>
+            <td id="dateOfBirth">
                 @Html.DisplayFor(modelItem => item.DateOfBirth)
             </td>
-            <td>
+            <td id="studentName">
                 @Html.DisplayFor(modelItem => item.Student.StudentFullName)
             </td>
             <td>
@@ -115,7 +115,19 @@
         $('#HealthProfileId').append(newRow);
     });
     
-    connection.on("Receiver_UpdateHealthProfile", function (healthProfile) {
-        console.log(healthProfile);
+    connection.on("Receiver_UpdateHealthProfile", function (updatedData) {
+        var fullName = updatedData.student && updatedData.student.studentFullName
+            ? updatedData.student.studentFullName
+            : "Không rõ";
+        console.log(updatedData);
+        //alert($(`#${updatedData.healthProfileHoaLqid}`).value);
+        document.getElementById("studentName").innerText = fullName;
+        document.getElementById("weight").innerText = updatedData.weight;
+        document.getElementById("height").innerText = updatedData.height;
+        document.getElementById("sight").innerText = updatedData.sight;
+        document.getElementById("hearing").innerText = updatedData.hearing;
+        document.getElementById("bloodType").innerText = updatedData.bloodType;
+        document.getElementById("sex").innerText = updatedData.sex ? "Nam" : "Nữ";
+        document.getElementById("dateOfBirth").innerText = updatedData.dateOfBirth;
     })
 </script>

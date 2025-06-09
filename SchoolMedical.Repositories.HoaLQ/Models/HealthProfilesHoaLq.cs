@@ -2,6 +2,7 @@
 #nullable disable
 using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 
 namespace SchoolMedical.Repositories.HoaLQ.Models;
 
@@ -9,8 +10,10 @@ public partial class HealthProfilesHoaLq
 {
     public int HealthProfileHoaLqid { get; set; }
 
-    public int? StudentId { get; set; }
+    [Required(ErrorMessage = "Please choose student")]
+    public int StudentId { get; set; }
 
+    [Range(0, 100, ErrorMessage = "Overweight, go away!")]
     public decimal? Weight { get; set; }
 
     public decimal? Height { get; set; }

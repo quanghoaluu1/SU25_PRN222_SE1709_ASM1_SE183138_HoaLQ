@@ -136,7 +136,9 @@
     });
 
     document.getElementById("btnHubUpdate").addEventListener("click", function (event) {
+        
    var dataObj = JSON.stringify({
+       HealthProfileHoaLqid: document.getElementById("HealthProfilesHoaLq_HealthProfileHoaLqid").value,
        Weight: document.getElementById("HealthProfilesHoaLq_Weight").value,
        Height: document.getElementById("HealthProfilesHoaLq_Height").value,
        Sight: document.getElementById("HealthProfilesHoaLq_Sight").value,
@@ -148,7 +150,9 @@
        Allergy: document.getElementById("HealthProfilesHoaLq_Allergy").value,
        ChronicDisease: document.getElementById("HealthProfilesHoaLq_ChronicDisease").value,
        MedicalHistory: document.getElementById("HealthProfilesHoaLq_MedicalHistory").value,
-       CurrentMedical: document.getElementById("HealthProfilesHoaLq_CurrentMedical").value
+       CurrentMedical: document.getElementById("HealthProfilesHoaLq_CurrentMedical").value,
+       StudentId: document.getElementById("HealthProfilesHoaLq_StudentId").value,
+
    })
         console.log(dataObj);
    connection.invoke("HubUpdate_HealthProfile", dataObj).then(function (){

@@ -22,58 +22,60 @@
 
         <div class="row gy-3" id="HealthProfileId">
             <div class="col-md-12">
-                <strong>@Html.DisplayNameFor(model => model.HealthProfilesHoaLq.Student):</strong>
-                <span class="ms-2">@Html.DisplayFor(model => model.HealthProfilesHoaLq.Student.StudentFullName)</span>
-            </div>
-            <div class="col-md-6">
-                <strong>@Html.DisplayNameFor(model => model.HealthProfilesHoaLq.Weight):</strong>
-                <span class="ms-2">@Html.DisplayFor(model => model.HealthProfilesHoaLq.Weight)</span>
-            </div>
-            <div class="col-md-6">
-                <strong>@Html.DisplayNameFor(model => model.HealthProfilesHoaLq.Height):</strong>
-                <span class="ms-2">@Html.DisplayFor(model => model.HealthProfilesHoaLq.Height)</span>
-            </div>
-            <div class="col-md-6">
-                <strong>@Html.DisplayNameFor(model => model.HealthProfilesHoaLq.Sight):</strong>
-                <span class="ms-2">@Html.DisplayFor(model => model.HealthProfilesHoaLq.Sight)</span>
-            </div>
-            <div class="col-md-6">
-                <strong>@Html.DisplayNameFor(model => model.HealthProfilesHoaLq.Hearing):</strong>
-                <span class="ms-2">@Html.DisplayFor(model => model.HealthProfilesHoaLq.Hearing)</span>
-            </div>
-            <div class="col-md-6">
-                <strong>@Html.DisplayNameFor(model => model.HealthProfilesHoaLq.BloodPressure):</strong>
-                <span class="ms-2">@Html.DisplayFor(model => model.HealthProfilesHoaLq.BloodPressure)</span>
-            </div>
-            <div class="col-md-6">
-                <strong>@Html.DisplayNameFor(model => model.HealthProfilesHoaLq.Allergy):</strong>
-                <span class="ms-2">@Html.DisplayFor(model => model.HealthProfilesHoaLq.Allergy)</span>
-            </div>
-            <div class="col-md-6">
-                <strong>@Html.DisplayNameFor(model => model.HealthProfilesHoaLq.ChronicDisease):</strong>
-                <span class="ms-2">@Html.DisplayFor(model => model.HealthProfilesHoaLq.ChronicDisease)</span>
-            </div>
-            <div class="col-md-6">
-                <strong>@Html.DisplayNameFor(model => model.HealthProfilesHoaLq.MedicalHistory):</strong>
-                <span class="ms-2">@Html.DisplayFor(model => model.HealthProfilesHoaLq.MedicalHistory)</span>
-            </div>
-            <div class="col-md-6">
-                <strong>@Html.DisplayNameFor(model => model.HealthProfilesHoaLq.CurrentMedical):</strong>
-                <span class="ms-2">@Html.DisplayFor(model => model.HealthProfilesHoaLq.CurrentMedical)</span>
-            </div>
-            <div class="col-md-6">
-                <strong>@Html.DisplayNameFor(model => model.HealthProfilesHoaLq.BloodType):</strong>
-                <span class="ms-2">@Html.DisplayFor(model => model.HealthProfilesHoaLq.BloodType)</span>
-            </div>
-            <div class="col-md-6">
-                <strong>@Html.DisplayNameFor(model => model.HealthProfilesHoaLq.Sex):</strong>
-                <span class="ms-2">
-                    @(Model.HealthProfilesHoaLq.Sex ? "Nam" : "Nữ")
-                </span>        </div>
-            <div class="col-md-6">
-                <strong>@Html.DisplayNameFor(model => model.HealthProfilesHoaLq.DateOfBirth):</strong>
-                <span class="ms-2">@Html.DisplayFor(model => model.HealthProfilesHoaLq.DateOfBirth)</span>
-            </div>
+    <strong>@Html.DisplayNameFor(model => model.HealthProfilesHoaLq.Student):</strong>
+    <span class="ms-2" id="studentName">@Html.DisplayFor(model => model.HealthProfilesHoaLq.Student.StudentFullName)</span>
+</div>
+<div class="col-md-6">
+    <strong>@Html.DisplayNameFor(model => model.HealthProfilesHoaLq.Weight):</strong>
+    <span class="ms-2" id="weight">@Html.DisplayFor(model => model.HealthProfilesHoaLq.Weight)</span>
+</div>
+<div class="col-md-6">
+    <strong>@Html.DisplayNameFor(model => model.HealthProfilesHoaLq.Height):</strong>
+    <span class="ms-2" id="height">@Html.DisplayFor(model => model.HealthProfilesHoaLq.Height)</span>
+</div>
+<div class="col-md-6">
+    <strong>@Html.DisplayNameFor(model => model.HealthProfilesHoaLq.Sight):</strong>
+    <span class="ms-2" id="sight">@Html.DisplayFor(model => model.HealthProfilesHoaLq.Sight)</span>
+</div>
+<div class="col-md-6">
+    <strong>@Html.DisplayNameFor(model => model.HealthProfilesHoaLq.Hearing):</strong>
+    <span class="ms-2" id="hearing">@Html.DisplayFor(model => model.HealthProfilesHoaLq.Hearing)</span>
+</div>
+<div class="col-md-6">
+    <strong>@Html.DisplayNameFor(model => model.HealthProfilesHoaLq.BloodPressure):</strong>
+    <span class="ms-2" id="bloodPressure">@Html.DisplayFor(model => model.HealthProfilesHoaLq.BloodPressure)</span>
+</div>
+<div class="col-md-6">
+    <strong>@Html.DisplayNameFor(model => model.HealthProfilesHoaLq.Allergy):</strong>
+    <span class="ms-2" id="allergy">@Html.DisplayFor(model => model.HealthProfilesHoaLq.Allergy)</span>
+</div>
+<div class="col-md-6">
+    <strong>@Html.DisplayNameFor(model => model.HealthProfilesHoaLq.ChronicDisease):</strong>
+    <span class="ms-2" id="chronicDisease">@Html.DisplayFor(model => model.HealthProfilesHoaLq.ChronicDisease)</span>
+</div>
+<div class="col-md-6">
+    <strong>@Html.DisplayNameFor(model => model.HealthProfilesHoaLq.MedicalHistory):</strong>
+    <span class="ms-2" id="medicalHistory">@Html.DisplayFor(model => model.HealthProfilesHoaLq.MedicalHistory)</span>
+</div>
+<div class="col-md-6">
+    <strong>@Html.DisplayNameFor(model => model.HealthProfilesHoaLq.CurrentMedical):</strong>
+    <span class="ms-2" id="currentMedical">@Html.DisplayFor(model => model.HealthProfilesHoaLq.CurrentMedical)</span>
+</div>
+<div class="col-md-6">
+    <strong>@Html.DisplayNameFor(model => model.HealthProfilesHoaLq.BloodType):</strong>
+    <span class="ms-2" id="bloodType">@Html.DisplayFor(model => model.HealthProfilesHoaLq.BloodType)</span>
+</div>
+<div class="col-md-6">
+    <strong>@Html.DisplayNameFor(model => model.HealthProfilesHoaLq.Sex):</strong>
+    <span class="ms-2" id="sex">
+        @(Model.HealthProfilesHoaLq.Sex ? "Nam" : "Nữ")
+    </span>
+</div>
+<div class="col-md-6">
+    <strong>@Html.DisplayNameFor(model => model.HealthProfilesHoaLq.DateOfBirth):</strong>
+    <span class="ms-2" id="dateOfBirth">@Html.DisplayFor(model => model.HealthProfilesHoaLq.DateOfBirth)</span>
+</div>
+
 
         </div>
 
@@ -99,6 +101,27 @@
     connection.on("Receiver_DeleteHealthProfile", function (HealthProfileHoaLqid) {
         //alert($(`#${HealthProfileHoaLqid}`).value);
         document.getElementById('HealthProfileId').innerHTML = "This profile had been deleted";
+    });
+    
+    connection.on("Receiver_UpdateHealthProfile", function (updatedData) {
+        var fullName = updatedData.student && updatedData.student.studentFullName
+            ? updatedData.student.studentFullName
+            : "Không rõ";
+        console.log(updatedData);
+        //alert($(`#${HealthProfileHoaLqid}`).value);
+        document.getElementById("studentName").innerText = fullName;
+        document.getElementById("weight").innerText = updatedData.weight;
+        document.getElementById("height").innerText = updatedData.height;
+        document.getElementById("sight").innerText = updatedData.sight;
+        document.getElementById("hearing").innerText = updatedData.hearing;
+        document.getElementById("bloodPressure").innerText = updatedData.bloodPressure;
+        document.getElementById("allergy").innerText = updatedData.allergy;
+        document.getElementById("chronicDisease").innerText = updatedData.chronicDisease;
+        document.getElementById("medicalHistory").innerText = updatedData.medicalHistory;
+        document.getElementById("currentMedical").innerText = updatedData.currentMedical;
+        document.getElementById("bloodType").innerText = updatedData.bloodType;
+        document.getElementById("sex").innerText = updatedData.sex ? "Nam" : "Nữ";
+        document.getElementById("dateOfBirth").innerText = updatedData.dateOfBirth;
     });
 
 </script>

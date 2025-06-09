@@ -26,15 +26,25 @@ public class SchoolMedicalHub: Hub
     public async Task HubCreate_HealthProfile(string healthProfileHoaLqIdJsonString)
     {
         var item = JsonConvert.DeserializeObject<HealthProfilesHoaLq>(healthProfileHoaLqIdJsonString);
-        await Clients.All.SendAsync("Receiver_CreateHealthProfile", item);
-        await _healthProfilesHoaLqService.CreateAsync(item);
+        var result = await _healthProfilesHoaLqService.CreateAsync(item);
+        await Clients.All.SendAsync("Receiver_CreateHealthProfile", result);
+
     }
     
     public async Task HubUpdate_HealthProfile(string healthProfileHoaLqIdJsonString)
     {
-        var item = JsonConvert.DeserializeObject<HealthProfilesHoaLq>(healthProfileHoaLqIdJsonString);
-        await Clients.All.SendAsync("Receiver_UpdateHealthProfile", item);
-        await _healthProfilesHoaLqService.UpdateAsync(item);
+        try
+        {
+            var item = JsonConvert.DeserializeObject<HealthProfilesHoaLq>(healthProfileHoaLqIdJsonString);
+            var result = await _healthProfilesHoaLqService.UpdateAsync(item);
+            await Clients.All.SendAsync("Receiver_UpdateHealthProfile", result);
+
+        }
+        catch (Exception ex)
+        {
+            Console.WriteLine("SignalR Error: " + ex.Message);
+            throw;
+        }
     }
     #endregion
 }

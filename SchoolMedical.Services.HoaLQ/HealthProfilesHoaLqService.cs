@@ -8,8 +8,8 @@ public interface IHealthProfilesHoaLqService
     Task<List<HealthProfilesHoaLq>> GetAllAsync();
     Task<HealthProfilesHoaLq> GetByIdAsync(int id);
     Task<List<HealthProfilesHoaLq>> SearchAsync(string bloodType, string searchCode, int sight);
-    Task<int> CreateAsync(HealthProfilesHoaLq healthProfilesHoaLq);
-    Task<int> UpdateAsync(HealthProfilesHoaLq healthProfilesHoaLq);
+    Task<HealthProfilesHoaLq> CreateAsync(HealthProfilesHoaLq healthProfilesHoaLq);
+    Task<HealthProfilesHoaLq> UpdateAsync(HealthProfilesHoaLq healthProfilesHoaLq);
     Task<bool> RemoveAsync(int id);
 }
 public class HealthProfilesHoaLqService: IHealthProfilesHoaLqService
@@ -33,13 +33,14 @@ public class HealthProfilesHoaLqService: IHealthProfilesHoaLqService
         return await _healthProfilesHoaLqRepository.SearchAsync(bloodType, searchCode, sight);
     }
     
-    public async Task<int> CreateAsync(HealthProfilesHoaLq healthProfilesHoaLq)
+    public async Task<HealthProfilesHoaLq> CreateAsync(HealthProfilesHoaLq healthProfilesHoaLq)
     {
         var createdProfile = await _healthProfilesHoaLqRepository.CreateAsync(healthProfilesHoaLq);
+        Console.WriteLine(createdProfile);
         return createdProfile;
     }
     
-    public async Task<int> UpdateAsync(HealthProfilesHoaLq healthProfilesHoaLq)
+    public async Task<HealthProfilesHoaLq> UpdateAsync(HealthProfilesHoaLq healthProfilesHoaLq)
     {
         var updatedProfile = await _healthProfilesHoaLqRepository.UpdateAsync(healthProfilesHoaLq);
         return updatedProfile;
