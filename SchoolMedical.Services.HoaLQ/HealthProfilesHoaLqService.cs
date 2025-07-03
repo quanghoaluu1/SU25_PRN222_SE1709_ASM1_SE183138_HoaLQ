@@ -1,13 +1,16 @@
 ﻿using SchoolMedical.Repositories.HoaLQ;
+using SchoolMedical.Repositories.HoaLQ.Helper;
 using SchoolMedical.Repositories.HoaLQ.Models;
 
 namespace SchoolMedical.Services.HoaLQ;
 
 public interface IHealthProfilesHoaLqService
 {
-    Task<List<HealthProfilesHoaLq>> GetAllAsync();
+    Task<PaginatedList<HealthProfilesHoaLq>> GetAllAsync(int pageNumber, int pageSize);
     Task<HealthProfilesHoaLq> GetByIdAsync(int id);
-    Task<List<HealthProfilesHoaLq>> SearchAsync(string bloodType, string searchCode, int sight);
+
+    Task<PaginatedList<HealthProfilesHoaLq>> SearchAsync(string studentName, string bloodType, bool? sex,
+        int? minWeight, int? maxWeight, int? minHeight, int? maxHealth, int pageNumber, int pageSize);
     Task<HealthProfilesHoaLq> CreateAsync(HealthProfilesHoaLq healthProfilesHoaLq);
     Task<HealthProfilesHoaLq> UpdateAsync(HealthProfilesHoaLq healthProfilesHoaLq);
     Task<bool> RemoveAsync(int id);
@@ -18,9 +21,14 @@ public class HealthProfilesHoaLqService: IHealthProfilesHoaLqService
     
     public HealthProfilesHoaLqService() => _healthProfilesHoaLqRepository ??= new HealthProfilesHoaLqRepository();
 
-    public async Task<List<HealthProfilesHoaLq>> GetAllAsync()
+    public async Task<PaginatedList<HealthProfilesHoaLq>> GetAllAsync(int pageNumber, int pageSize)
     {
-        return await _healthProfilesHoaLqRepository.GetAllAsync();
+        return await _healthProfilesHoaLqRepository.GetAllAsync(pageNumber,pageSize);
+    }
+    
+    public async Task<PaginatedList<HealthProfilesHoaLq>> SearchAsync(string studentName, string bloodType, bool? sex, int? minWeight, int? maxWeight, int? minHeight, int? maxHealth, int pageNumber, int pageSize)
+    {
+        return await _healthProfilesHoaLqRepository.SearchAsync(studentName, bloodType,sex, minWeight, maxWeight, minHeight, maxHealth, pageNumber, pageSize);
     }
     
     public async Task<HealthProfilesHoaLq> GetByIdAsync(int id)

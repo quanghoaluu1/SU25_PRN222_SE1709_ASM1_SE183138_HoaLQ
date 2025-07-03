@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using Microsoft.EntityFrameworkCore;
 using SchoolMedical.Repositories.HoaLQ.Basic;
+using SchoolMedical.Repositories.HoaLQ.Helper;
 using SchoolMedical.Repositories.HoaLQ.Models;
 
 namespace SchoolMedical.Repositories.HoaLQ
@@ -21,13 +22,61 @@ namespace SchoolMedical.Repositories.HoaLQ
             _context = context;
         }
         
-        public new async Task< List<HealthProfilesHoaLq>> GetAllAsync()
+        public async Task<PaginatedList<HealthProfilesHoaLq>> GetAllAsync(int pageNumber, int pageSize)
         {
-            return await _context.HealthProfilesHoaLqs
+            var query = _context.HealthProfilesHoaLqs
                 .Include(h => h.Student)
-                .ToListAsync() ?? new List<HealthProfilesHoaLq>();
+                .AsQueryable();
+            var result = await PaginatedList<HealthProfilesHoaLq>.CreateAsync(query, pageNumber, pageSize);
+            return result;
         }
 
+        public async Task<PaginatedList<HealthProfilesHoaLq>> SearchAsync(string studentName, string bloodType, bool? sex, int? minWeight, int? maxWeight, int? minHeight, int? maxHealth, int pageNumber, int pageSize)
+        {
+            var query = _context.HealthProfilesHoaLqs
+                .Include(p => p.Student)
+                .AsQueryable();
+
+            if (!string.IsNullOrWhiteSpace(studentName))
+            {
+                query = query.Where(p => p.Student.StudentFullName.Contains(studentName));
+            }
+
+            if (!string.IsNullOrWhiteSpace(bloodType))
+            {
+                query = query.Where(p => p.BloodType.Contains(bloodType));
+            }
+
+            if (sex.HasValue)
+            {
+                query = query.Where(p => p.Sex.Equals(sex));
+            }
+
+            if (minWeight.HasValue)
+            {
+                query = query.Where(p => p.Weight >= minWeight.Value);
+            }
+
+            if (maxWeight.HasValue)
+            {
+                query = query.Where(p => p.Weight <= maxWeight.Value);
+            }
+
+            if (minHeight.HasValue)
+            {
+                query = query.Where(p => p.Height >= minHeight.Value);
+            }
+
+            if (maxHealth.HasValue)
+            {
+                query = query.Where(p => p.Height <= maxHealth.Value);
+            }
+
+            var result = await PaginatedList<HealthProfilesHoaLq>.CreateAsync(query, pageNumber, pageSize);
+
+            return result;
+        }
+        
         public async Task<HealthProfilesHoaLq> GetByIdAsync(int id)
         {
             var healthProfile = await _context.HealthProfilesHoaLqs
