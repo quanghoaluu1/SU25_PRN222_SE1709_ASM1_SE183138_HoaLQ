@@ -1,0 +1,266 @@
+@page
+@model SchoolMedical.RazorWebApp.HoaLQ.Pages.HealthProfilesHoaLQs.IndexModel
+
+@{
+    ViewData["Title"] = "Index";
+}
+<style>
+    .table-hover tbody tr:hover {
+        background-color: #f1f1f1;
+        transition: background-color 0.3s ease-in-out;
+        cursor: alias;
+    }
+</style>
+<h1>Search</h1>
+<div class="mb-3">
+    <a asp-page="Create" class="btn btn-success"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-shield-fill-plus" viewBox="0 0 16 16">
+        <path fill-rule="evenodd" d="M8 0c-.69 0-1.843.265-2.928.56-1.11.3-2.229.655-2.887.87a1.54 1.54 0 0 0-1.044 1.262c-.596 4.477.787 7.795 2.465 9.99a11.8 11.8 0 0 0 2.517 2.453c.386.273.744.482 1.048.625.28.132.581.24.829.24s.548-.108.829-.24a7 7 0 0 0 1.048-.625 11.8 11.8 0 0 0 2.517-2.453c1.678-2.195 3.061-5.513 2.465-9.99a1.54 1.54 0 0 0-1.044-1.263 63 63 0 0 0-2.887-.87C9.843.266 8.69 0 8 0m-.5 5a.5.5 0 0 1 1 0v1.5H10a.5.5 0 0 1 0 1H8.5V9a.5.5 0 0 1-1 0V7.5H6a.5.5 0 0 1 0-1h1.5z"/>
+    </svg> Create New</a>
+</div>
+        
+
+<div id="searchForm" class="mb-4 p-3 border rounded">
+    <div class="row g-3 align-items-end">
+        <div class="col-md-3">
+            <label for="studentNameInput" class="col-form-label-sm">Student Name</label>
+            <input type="text" id="studentNameInput" class="form-control" placeholder="Enter name...">
+        </div>
+        <div class="col-md-2">
+            <label for="bloodTypeInput" class="col-form-label-sm">Blood Type</label>
+            <input type="text" id="bloodTypeInput" class="form-control" placeholder="Enter blood type...">
+        </div>
+        <div class="col-md-2">
+            <label for="sexInput" class="col-form-label-sm">Sex</label>
+            <select id="sexInput" class="form-select">
+                <option value="">All</option>
+                <option value="true">Nam</option>
+                <option value="false">Nữ</option>
+            </select>
+        </div>
+        <div class="col-md-1">
+            <label for="minWeightInput" class="col-form-label-sm">Min Weight</label>
+            <input type="number" id="minWeightInput" class="form-control">
+        </div>
+        <div class="col-md-1">
+            <label for="maxWeightInput" class="col-form-label-sm">Max Weight</label>
+            <input type="number" id="maxWeightInput" class="form-control">
+        </div>
+        <div class="col-md-1">
+            <label for="minHeightInput" class="col-form-label-sm">Min Height</label>
+            <input type="number" id="minHeightInput" class="form-control">
+        </div>
+        <div class="col-md-1">
+            <label for="maxHeightInput" class="col-form-label-sm">Max Height</label>
+            <input type="number" id="maxHeightInput" class="form-control">
+        </div>
+    </div>
+</div>
+
+<table class="table table-bordered table-hover align-middle text-center">
+    <thead class="table-light">
+    <tr>
+        <th>@Html.DisplayNameFor(model => model.HealthProfilesHoaLq[0].Weight)</th>
+        <th>@Html.DisplayNameFor(model => model.HealthProfilesHoaLq[0].Height)</th>
+        <th>@Html.DisplayNameFor(model => model.HealthProfilesHoaLq[0].Sight)</th>
+        <th>@Html.DisplayNameFor(model => model.HealthProfilesHoaLq[0].Hearing)</th>
+        <th>@Html.DisplayNameFor(model => model.HealthProfilesHoaLq[0].BloodType)</th>
+        <th>@Html.DisplayNameFor(model => model.HealthProfilesHoaLq[0].Sex)</th>
+        <th>@Html.DisplayNameFor(model => model.HealthProfilesHoaLq[0].DateOfBirth)</th>
+        <th>@Html.DisplayNameFor(model => model.HealthProfilesHoaLq[0].Student)</th>
+        <th>Actions</th>
+    </tr>
+    </thead>
+    <tbody id="HealthProfileId">
+    @foreach (var item in Model.HealthProfilesHoaLq)
+    {
+        <tr id="@item.HealthProfileHoaLqid">
+            <td id="weight">
+                @Html.DisplayFor(modelItem => item.Weight)
+            </td>
+            <td id="height">
+                @Html.DisplayFor(modelItem => item.Height)
+            </td>
+            <td id="sight">
+                @Html.DisplayFor(modelItem => item.Sight)
+            </td>
+            <td id="hearing">
+                @Html.DisplayFor(modelItem => item.Hearing)
+            </td>
+            <td id="bloodType">
+                @Html.DisplayFor(modelItem => item.BloodType)
+            </td>
+            <td id="sex">
+                @(item.Sex == true ? "Nam" : "Nữ")
+            </td>
+            <td id="dateOfBirth">
+                @Html.DisplayFor(modelItem => item.DateOfBirth)
+            </td>
+            <td id="studentName">
+                @Html.DisplayFor(modelItem => item.Student.StudentFullName)
+            </td>
+            <td>
+                <a asp-page="./Edit" asp-route-id="@item.HealthProfileHoaLqid" class="btn btn-sm btn-warning me-1">Edit</a>
+                <a asp-page="./Details" asp-route-id="@item.HealthProfileHoaLqid" class="btn btn-sm btn-info text-white me-1">Details</a>
+                <a asp-page="./Delete" asp-route-id="@item.HealthProfileHoaLqid" class="btn btn-sm btn-danger">Delete</a>
+            </td>
+        </tr>
+    }
+    </tbody>
+</table>
+<nav aria-label="Page navigation">
+    <ul class="pagination justify-content-center" id="pagination-container">
+    </ul>
+</nav>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<script src="~/js/signalr/signalr.js"></script>
+<script>
+    "use strict";
+    $('#pagination-container').on('click', 'a.page-link', function(event) {
+        event.preventDefault();
+        var page = $(this).data('page');
+        if (!$(this).parent().hasClass('disabled')) {
+            search(page);
+        }
+    });
+    let currentPage = 1;
+    const pageSize = 5;
+    var connection = new signalR.HubConnectionBuilder().withUrl("/SchoolMedicalHub").build();
+
+    connection.start().then(function () {
+        console.log("Connected to the SignalR Hub");
+        search(1);
+    }).catch(function (err) {
+        return console.error(err.toString());
+    });
+
+    function createTableRow(profile) {
+        var sexText = profile.sex ? "Nam" : "Nữ";
+        var fullName = profile.studentFullName ? profile.studentFullName : "Không rõ";
+        return `
+                <tr id="${profile.healthProfileHoaLqid}">
+                    <td>${profile.weight}</td>
+                    <td>${profile.height}</td>
+                    <td>${profile.sight}</td>
+                    <td>${profile.hearing}</td>
+                    <td>${profile.bloodType}</td>
+                    <td>${sexText}</td>
+                    <td>${profile.dateOfBirth}</td>
+                    <td>${fullName}</td>
+                    <td>
+                        <a href="/HealthProfilesHoaLQs/Edit/${profile.healthProfileHoaLqid}" class="btn btn-sm btn-warning me-1">Edit</a>
+                        <a href="/HealthProfilesHoaLQs/Details/${profile.healthProfileHoaLqid}" class="btn btn-sm btn-info text-white me-1">Details</a>
+                        <a href="/HealthProfilesHoaLQs/Delete/${profile.healthProfileHoaLqid}" class="btn btn-sm btn-danger">Delete</a>
+                    </td>
+                </tr>`;
+    }
+    function updateTable(profiles) {
+        var tableBody = $('#HealthProfileId');
+        tableBody.empty();
+        if (profiles && profiles.length > 0) {
+            profiles.forEach(function(profile) {
+                var newRow = createTableRow(profile);
+                tableBody.append(newRow);
+            });
+        } else {
+            tableBody.append('<tr><td colspan="9">No matching records found.</td></tr>');
+        }
+    }
+
+    function search(page = 1) {
+        currentPage = page;
+        var studentName = $('#studentNameInput').val();
+        var bloodType = $('#bloodTypeInput').val();
+        var sexValue = $('#sexInput').val();
+        var sex = sexValue === "" ? null : (sexValue === "true");
+        var minWeight = $('#minWeightInput').val() ? parseInt($('#minWeightInput').val()) : null;
+        var maxWeight = $('#maxWeightInput').val() ? parseInt($('#maxWeightInput').val()) : null;
+        var minHeight = $('#minHeightInput').val() ? parseInt($('#minHeightInput').val()) : null;
+        var maxHeight = $('#maxHeightInput').val() ? parseInt($('#maxHeightInput').val()) : null;
+
+        connection.invoke("HubSearch_HealthProfiles", studentName, bloodType, sex, minWeight, maxWeight, minHeight, maxHeight, currentPage, pageSize)
+            .catch(function (err) {
+                return console.error(err.toString());
+            });
+    }
+    $('#searchForm input, #searchForm select').on('input change', function () {
+        search(1);
+    });
+    function updatePagination(paginationData) {
+        console.log('Dữ liệu phân trang nhận được:', paginationData);
+
+        if (!paginationData) {
+            console.error("Không nhận được dữ liệu phân trang (paginationData is undefined)!");
+            return;
+        }
+        const { pageIndex, totalPages, hasPreviousPage, hasNextPage } = paginationData;
+        const container = $('#pagination-container');
+        container.empty();
+
+        let prevDisabled = !hasPreviousPage ? "disabled" : "";
+        container.append(`<li class="page-item ${prevDisabled}"><a class="page-link" href="#" data-page="${pageIndex - 1}"><i class="bi bi-arrow-left"></i></a></li>`);
+
+        for (let i = 1; i <= totalPages; i++) {
+            let activeClass = i === pageIndex ? "active" : "";
+            container.append(`<li class="page-item ${activeClass}"><a class="page-link" href="#" data-page="${i}">${i}</a></li>`);
+        }
+
+        let nextDisabled = !hasNextPage ? "disabled" : "";
+        container.append(`<li class="page-item ${nextDisabled}"><a class="page-link" href="#" data-page="${pageIndex + 1}"><i class="bi bi-arrow-right"></i></a></li>`);
+    }
+
+    connection.on("Receive_SearchHealthProfile", function (response) {
+        console.log("Search results received:", response);
+        updateTable(response.items);
+        updatePagination(response);
+    });
+    connection.on("Receiver_DeleteHealthProfile", function (HealthProfileHoaLqid) {
+        //alert($(`#${HealthProfileHoaLqid}`).value);
+        $('#HealthProfileId').find(`tr[id='${HealthProfileHoaLqid}']`).remove();
+    });
+
+    connection.on("Receiver_CreateHealthProfile", function (healthProfile) {
+        console.log(healthProfile);
+        // var sexText = healthProfile.sex ? "Nam" : "Nữ";
+        // var fullName = healthProfile.student && healthProfile.student.studentFullName
+        //     ? healthProfile.student.studentFullName
+        //     : "Không rõ";
+        // var newRow = `
+        // <tr id="${healthProfile.healthProfileHoaLqid}">
+        //     <td>${healthProfile.weight}</td>
+        //     <td>${healthProfile.height}</td>
+        //     <td>${healthProfile.sight}</td>
+        //     <td>${healthProfile.hearing}</td>
+        //     <td>${healthProfile.bloodType}</td>
+        //     <td>${sexText}</td>
+        //     <td>${healthProfile.dateOfBirth}</td>
+        //     <td>${fullName}</td>
+        //     <td>
+        //         <a href="/HealthProfilesHoaLQs/Edit/${healthProfile.healthProfileHoaLqid}" class="btn btn-sm btn-warning me-1">Edit</a>
+        //         <a href="/HealthProfilesHoaLQs/Details/${healthProfile.healthProfileHoaLqid}" class="btn btn-sm btn-info text-white me-1">Details</a>
+        //         <a href="/HealthProfilesHoaLQs/Delete/${healthProfile.healthProfileHoaLqid}" class="btn btn-sm btn-danger">Delete</a>
+        //     </td>
+        // </tr>
+        // `;
+        var newRow = createTableRow(healthProfile);
+        $('#HealthProfileId').append(newRow);
+    });
+    
+    connection.on("Receiver_UpdateHealthProfile", function (updatedData) {
+        // var fullName = updatedData.student && updatedData.student.studentFullName
+        //     ? updatedData.student.studentFullName
+        //     : "Không rõ";
+        // console.log(updatedData);
+        // //alert($(`#${updatedData.healthProfileHoaLqid}`).value);
+        // document.getElementById("studentName").innerText = fullName;
+        // document.getElementById("weight").innerText = updatedData.weight;
+        // document.getElementById("height").innerText = updatedData.height;
+        // document.getElementById("sight").innerText = updatedData.sight;
+        // document.getElementById("hearing").innerText = updatedData.hearing;
+        // document.getElementById("bloodType").innerText = updatedData.bloodType;
+        // document.getElementById("sex").innerText = updatedData.sex ? "Nam" : "Nữ";
+        // document.getElementById("dateOfBirth").innerText = updatedData.dateOfBirth;
+        $(`#${updatedData.healthProfileHoaLqid}`).remove();
+        var updatedRow = createTableRow(updatedData);
+        $('#HealthProfileId').append(updatedRow);
+    })
+</script>
