@@ -11,13 +11,21 @@
   <component name="ChangeListManager">
     <list default="true" id="7107faa1-db65-471d-bbc9-b22c3b0b0d9d" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.SU25_PRN222_SE1709_ASM1_SE183138_HoaLQ/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.SU25_PRN222_SE1709_ASM1_SE183138_HoaLQ/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SchoolMedical.RazorWebApp.HoaLQ/Hubs/SchoolMedicalHub.cs" beforeDir="false" afterPath="$PROJECT_DIR$/SchoolMedical.RazorWebApp.HoaLQ/Hubs/SchoolMedicalHub.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SchoolMedical.RazorWebApp.HoaLQ/Pages/Account/Forbidden.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/SchoolMedical.RazorWebApp.HoaLQ/Pages/Forbidden.cshtml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SchoolMedical.RazorWebApp.HoaLQ/Pages/Account/Forbidden.cshtml.cs" beforeDir="false" afterPath="$PROJECT_DIR$/SchoolMedical.RazorWebApp.HoaLQ/Pages/Forbidden.cshtml.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SchoolMedical.RazorWebApp.HoaLQ/Pages/Account/Login.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/SchoolMedical.RazorWebApp.HoaLQ/Pages/Login.cshtml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SchoolMedical.RazorWebApp.HoaLQ/Pages/Account/Login.cshtml.cs" beforeDir="false" afterPath="$PROJECT_DIR$/SchoolMedical.RazorWebApp.HoaLQ/Pages/Login.cshtml.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SchoolMedical.RazorWebApp.HoaLQ/Pages/Account/Logout.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/SchoolMedical.RazorWebApp.HoaLQ/Pages/Logout.cshtml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SchoolMedical.RazorWebApp.HoaLQ/Pages/Account/Logout.cshtml.cs" beforeDir="false" afterPath="$PROJECT_DIR$/SchoolMedical.RazorWebApp.HoaLQ/Pages/Logout.cshtml.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SchoolMedical.RazorWebApp.HoaLQ/Pages/HealthProfilesHoaLQs/Create.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/SchoolMedical.RazorWebApp.HoaLQ/Pages/HealthProfilesHoaLQs/Create.cshtml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SchoolMedical.RazorWebApp.HoaLQ/Pages/HealthProfilesHoaLQs/Delete.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/SchoolMedical.RazorWebApp.HoaLQ/Pages/HealthProfilesHoaLQs/Delete.cshtml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/SchoolMedical.RazorWebApp.HoaLQ/Pages/HealthProfilesHoaLQs/Details.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/SchoolMedical.RazorWebApp.HoaLQ/Pages/HealthProfilesHoaLQs/Details.cshtml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/SchoolMedical.RazorWebApp.HoaLQ/Pages/HealthProfilesHoaLQs/Edit.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/SchoolMedical.RazorWebApp.HoaLQ/Pages/HealthProfilesHoaLQs/Edit.cshtml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/SchoolMedical.RazorWebApp.HoaLQ/Pages/HealthProfilesHoaLQs/Index.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/SchoolMedical.RazorWebApp.HoaLQ/Pages/HealthProfilesHoaLQs/Index.cshtml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SchoolMedical.RazorWebApp.HoaLQ/Pages/Shared/_Layout.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/SchoolMedical.RazorWebApp.HoaLQ/Pages/Shared/_Layout.cshtml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SchoolMedical.RazorWebApp.HoaLQ/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/SchoolMedical.RazorWebApp.HoaLQ/Program.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/SchoolMedical.Repositories.HoaLQ/HealthProfilesHoaLqRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/SchoolMedical.Repositories.HoaLQ/HealthProfilesHoaLqRepository.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/SchoolMedical.Repositories.HoaLQ/Models/HealthProfilesHoaLq.cs" beforeDir="false" afterPath="$PROJECT_DIR$/SchoolMedical.Repositories.HoaLQ/Models/HealthProfilesHoaLq.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SchoolMedical.Services.HoaLQ/HealthProfilesHoaLqService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/SchoolMedical.Services.HoaLQ/HealthProfilesHoaLqService.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -64,7 +72,10 @@
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/f0f1fcefa3d345fda97062807fd64b36b0908/d8/d832d053/ModelExplorer.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/SchoolMedical.RazorWebApp.HoaLQ/Hubs/ChatHub.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/SchoolMedical.RazorWebApp.HoaLQ/Hubs/SchoolMedicalHub.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/SchoolMedical.RazorWebApp.HoaLQ/Pages/Forbidden.cshtml" root0="FORCE_HIGHLIGHTING" root1="FORCE_HIGHLIGHTING" root2="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/SchoolMedical.RazorWebApp.HoaLQ/Pages/Shared/_ValidationScriptsPartial.cshtml" root0="FORCE_HIGHLIGHTING" root1="FORCE_HIGHLIGHTING" root2="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/SchoolMedical.RazorWebApp.HoaLQ/package-lock.json" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/SchoolMedical.RazorWebApp.HoaLQ/wwwroot/lib/bootstrap/dist/css/bootstrap-reboot.rtl.css.map" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/SchoolMedical.RazorWebApp.HoaLQ/wwwroot/lib/bootstrap/dist/js/bootstrap.bundle.js.map" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/SchoolMedical.RazorWebApp.HoaLQ/wwwroot/lib/bootstrap/dist/js/bootstrap.bundle.min.js.map" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/SchoolMedical.Services.HoaLQ/HealthProfilesHoaLqService.cs" root0="FORCE_HIGHLIGHTING" />
@@ -87,6 +98,7 @@
   <component name="PropertiesComponent">{
   &quot;keyToString&quot;: {
     &quot;.NET Launch Settings Profile.SchoolMedical.RazorWebApp.HoaLQ: IIS Express.executor&quot;: &quot;Run&quot;,
+    &quot;.NET Launch Settings Profile.SchoolMedical.RazorWebApp.HoaLQ: https.executor&quot;: &quot;Run&quot;,
     &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
@@ -102,7 +114,7 @@
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
 }</component>
-  <component name="RunManager" selected=".NET Launch Settings Profile.SchoolMedical.RazorWebApp.HoaLQ: IIS Express">
+  <component name="RunManager" selected=".NET Launch Settings Profile.SchoolMedical.RazorWebApp.HoaLQ: https">
     <configuration name="SchoolMedical.RazorWebApp.HoaLQ: IIS Express" type="LaunchSettings" factoryName=".NET Launch Settings Profile">
       <option name="LAUNCH_PROFILE_PROJECT_FILE_PATH" value="$PROJECT_DIR$/SchoolMedical.RazorWebApp.HoaLQ/SchoolMedical.RazorWebApp.HoaLQ.csproj" />
       <option name="LAUNCH_PROFILE_TFM" value="net8.0" />
@@ -180,6 +192,8 @@
       <workItem from="1749294405704" duration="891000" />
       <workItem from="1749371560092" duration="29000" />
       <workItem from="1749455914738" duration="7778000" />
+      <workItem from="1751530175349" duration="4346000" />
+      <workItem from="1752481206383" duration="5276000" />
     </task>
     <task id="LOCAL-00001" summary="Add HealthProfilesHoaLqRepository and vcs.xml configuration">
       <option name="closed" value="true" />
@@ -266,17 +280,12 @@
           <option name="timeStamp" value="9" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/SchoolMedical.RazorWebApp.HoaLQ/Hubs/SchoolMedicalHub.cs</url>
-          <line>26</line>
-          <properties documentPath="C:\Users\quang\OneDrive\Máy tính\SU25_PRN222_SE1709_ASM1_SE183138_HoaLQ\SchoolMedical.RazorWebApp.HoaLQ\Hubs\SchoolMedicalHub.cs" containingFunctionPresentation="Method 'HubCreate_HealthProfile'">
-            <startOffsets>
-              <option value="868" />
-            </startOffsets>
-            <endOffsets>
-              <option value="869" />
-            </endOffsets>
+          <url>file://$PROJECT_DIR$/SchoolMedical.RazorWebApp.HoaLQ/Pages/Shared/_Layout.cshtml</url>
+          <line>52</line>
+          <properties isMultiMethodBreakpoint="true">
+            <option name="multiMethodBreakpoint" value="true" />
           </properties>
-          <option name="timeStamp" value="12" />
+          <option name="timeStamp" value="10" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

@@ -26,6 +26,7 @@ namespace SchoolMedical.Repositories.HoaLQ
         {
             var query = _context.HealthProfilesHoaLqs
                 .Include(h => h.Student)
+                .OrderByDescending(h => h.HealthProfileHoaLqid)
                 .AsQueryable();
             var result = await PaginatedList<HealthProfilesHoaLq>.CreateAsync(query, pageNumber, pageSize);
             return result;
@@ -35,6 +36,7 @@ namespace SchoolMedical.Repositories.HoaLQ
         {
             var query = _context.HealthProfilesHoaLqs
                 .Include(p => p.Student)
+                .OrderByDescending(p => p.HealthProfileHoaLqid)
                 .AsQueryable();
 
             if (!string.IsNullOrWhiteSpace(studentName))

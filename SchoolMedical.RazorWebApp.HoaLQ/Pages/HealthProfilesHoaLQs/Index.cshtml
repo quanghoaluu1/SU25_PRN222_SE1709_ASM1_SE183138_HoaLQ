@@ -17,45 +17,8 @@
         <path fill-rule="evenodd" d="M8 0c-.69 0-1.843.265-2.928.56-1.11.3-2.229.655-2.887.87a1.54 1.54 0 0 0-1.044 1.262c-.596 4.477.787 7.795 2.465 9.99a11.8 11.8 0 0 0 2.517 2.453c.386.273.744.482 1.048.625.28.132.581.24.829.24s.548-.108.829-.24a7 7 0 0 0 1.048-.625 11.8 11.8 0 0 0 2.517-2.453c1.678-2.195 3.061-5.513 2.465-9.99a1.54 1.54 0 0 0-1.044-1.263 63 63 0 0 0-2.887-.87C9.843.266 8.69 0 8 0m-.5 5a.5.5 0 0 1 1 0v1.5H10a.5.5 0 0 1 0 1H8.5V9a.5.5 0 0 1-1 0V7.5H6a.5.5 0 0 1 0-1h1.5z"/>
     </svg> Create New</a>
 </div>
-        
 
-<div id="searchForm" class="mb-4 p-3 border rounded">
-    <div class="row g-3 align-items-end">
-        <div class="col-md-3">
-            <label for="studentNameInput" class="col-form-label-sm">Student Name</label>
-            <input type="text" id="studentNameInput" class="form-control" placeholder="Enter name...">
-        </div>
-        <div class="col-md-2">
-            <label for="bloodTypeInput" class="col-form-label-sm">Blood Type</label>
-            <input type="text" id="bloodTypeInput" class="form-control" placeholder="Enter blood type...">
-        </div>
-        <div class="col-md-2">
-            <label for="sexInput" class="col-form-label-sm">Sex</label>
-            <select id="sexInput" class="form-select">
-                <option value="">All</option>
-                <option value="true">Nam</option>
-                <option value="false">Nữ</option>
-            </select>
-        </div>
-        <div class="col-md-1">
-            <label for="minWeightInput" class="col-form-label-sm">Min Weight</label>
-            <input type="number" id="minWeightInput" class="form-control">
-        </div>
-        <div class="col-md-1">
-            <label for="maxWeightInput" class="col-form-label-sm">Max Weight</label>
-            <input type="number" id="maxWeightInput" class="form-control">
-        </div>
-        <div class="col-md-1">
-            <label for="minHeightInput" class="col-form-label-sm">Min Height</label>
-            <input type="number" id="minHeightInput" class="form-control">
-        </div>
-        <div class="col-md-1">
-            <label for="maxHeightInput" class="col-form-label-sm">Max Height</label>
-            <input type="number" id="maxHeightInput" class="form-control">
-        </div>
-    </div>
-</div>
-
+<a asp-page="./Search" class="btn btn-sm btn-success me-1">Search</a>
 <table class="table table-bordered table-hover align-middle text-center">
     <thead class="table-light">
     <tr>
@@ -242,7 +205,7 @@
         // </tr>
         // `;
         var newRow = createTableRow(healthProfile);
-        $('#HealthProfileId').append(newRow);
+        $('#HealthProfileId').prepend(newRow);
     });
     
     connection.on("Receiver_UpdateHealthProfile", function (updatedData) {

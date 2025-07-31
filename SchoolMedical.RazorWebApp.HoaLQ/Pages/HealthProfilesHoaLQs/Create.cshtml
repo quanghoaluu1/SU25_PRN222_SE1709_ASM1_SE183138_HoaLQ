@@ -144,11 +144,12 @@
        Allergy: document.getElementById("HealthProfilesHoaLq_Allergy").value,
        ChronicDisease: document.getElementById("HealthProfilesHoaLq_ChronicDisease").value,
        MedicalHistory: document.getElementById("HealthProfilesHoaLq_MedicalHistory").value,
-       CurrentMedical: document.getElementById("HealthProfilesHoaLq_CurrentMedical").value
+       CurrentMedical: document.getElementById("HealthProfilesHoaLq_CurrentMedical").value,
+       StudentFullName: document.getElementById("HealthProfilesHoaLq_StudentId").options[document.getElementById("HealthProfilesHoaLq_StudentId").selectedIndex].text
    })
         console.log(dataObj);
    connection.invoke("HubCreate_HealthProfile", dataObj).then(function (){
-       window.location.href = "/HealthProfilesHoaLQs/Index";
+       // window.location.href = "/HealthProfilesHoaLQs/Index";
    }).catch(function (err) {
        return console.error(err.toString());
    });

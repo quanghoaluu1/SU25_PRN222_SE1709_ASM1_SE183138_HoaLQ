@@ -18,7 +18,6 @@
 <body>
     @if (!isLoginPage)
     {
-
         <header>
             <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
                 <div class="container">
@@ -36,6 +35,9 @@
                                 <a class="nav-link text-dark" asp-area="" asp-page="/HealthProfilesHoaLQs/Index">Health Profile</a>
                             </li>
                             <li class="nav-item">
+                                <a class="nav-link text-dark" asp-area="" asp-page="/HealthProfilesHoaLQs/Search">Health Profile Search</a>
+                            </li>
+                            <li class="nav-item">
                                 <a class="nav-link text-dark" asp-area="" asp-page="/Chat">Chat</a>
                             </li>
                             <li class="nav-item">
@@ -48,11 +50,11 @@
                                 @if (!string.IsNullOrEmpty(fullName))
                                 {
                                     <span class="navbar-text me-3">Xin chào, @fullName!</span>
-                                    <a asp-page="/Account/Logout" class="btn btn-danger btn-outline-dark text-white">Logout</a>
+                                    <a asp-page="/Logout" class="btn btn-danger btn-outline-dark text-white">Logout</a>
                                 }
                                 else
                                 {
-                                    <a class="nav-link text-dark btn btn-success" asp-area="" asp-page="/Account/Login">Login</a>
+                                    <a class="nav-link text-dark btn btn-success" asp-area="" asp-page="/Login">Login</a>
                                 }
                             </li>
                         </ul>

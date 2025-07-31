@@ -15,7 +15,8 @@ builder.Services.AddSignalR();
 builder.Services.AddAuthentication(CookieAuthenticationDefaults.AuthenticationScheme)
     .AddCookie(options =>
     {
-        options.AccessDeniedPath = "/Account/Forbidden";
+        options.LoginPath = "/Login";
+        options.AccessDeniedPath = "/Forbidden";
         options.ExpireTimeSpan = TimeSpan.FromMinutes(5);
     });var app = builder.Build();
 
